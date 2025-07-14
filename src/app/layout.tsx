@@ -24,10 +24,12 @@ export default function RootLayout({ children }: RootLayoutPropsType) {
 					defaultTheme="light"
 					enableSystem
 					disableTransitionOnChange>
-					<header>
+					<header className="border-gray-700 border-b">
 						<Navswitch />
 					</header>
-					<main>{children}</main>
+					<main className="container mx-auto px-16 md:px-32">
+						{children}
+					</main>
 				</ThemeProvider>
 			</body>
 		</html>
