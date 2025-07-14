@@ -24,20 +24,30 @@ const MobileNav = () => {
 					className="w-full">
 					<SheetHeader>
 						<SheetTitle>
-							<Image
-								src={"/logo.png"}
-								alt="logo"
-								height={100}
-								width={100}
-								className="h-[24px] w-[24px]"
-							/>
+							<Link href={"/"}>
+								<Image
+									src={"/logo.png"}
+									alt="logo"
+									height={100}
+									width={100}
+									className="h-[24px] w-[24px]"
+								/>
+							</Link>
 						</SheetTitle>
-						<SheetClose asChild>
-							<Link href={"/"}>Home</Link>
-							<Link href={"/"}>About</Link>
-							<Link href={"/"}>Projects</Link>
-							<Link href={"/"}>Contact</Link>
-						</SheetClose>
+						<div className="grid place-items-center gap-3 py-10">
+							<SheetClose asChild>
+								<Link href={"/"}>Home</Link>
+							</SheetClose>
+							<SheetClose asChild>
+								<Link href={"/about"}>About</Link>
+							</SheetClose>
+							<SheetClose asChild>
+								<Link href={"/projects"}>Projects</Link>
+							</SheetClose>
+							<SheetClose asChild>
+								<Link href={"/contact"}>Contact</Link>
+							</SheetClose>
+						</div>
 					</SheetHeader>
 				</SheetContent>
 			</Sheet>

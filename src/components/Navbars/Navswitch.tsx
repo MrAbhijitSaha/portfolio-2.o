@@ -1,10 +1,16 @@
+import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 
 const Navswitch = () => {
 	return (
-		<section className="container mx-auto px-6 py-5">
-			<MobileNav />
-		</section>
+		<header className="container mx-auto px-6 py-5">
+			<section className="block md:hidden">
+				<MobileNav />
+			</section>
+			<section className="hidden md:block">
+				<DesktopNav />
+			</section>
+		</header>
 	);
 };
 

@@ -1,5 +1,11 @@
+import HomeHero from "@/components/Hero/HomeHero";
+
 const page = () => {
-	return <></>;
+	return (
+		<>
+			<HomeHero />
+		</>
+	);
 };
 
 export default page;
