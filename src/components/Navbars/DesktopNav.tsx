@@ -1,11 +1,5 @@
 const DesktopNav = () => {
-    return (
-        <>
-            
-
-
-        </>
-    );
-}
+	return <></>;
+};
 
 export default DesktopNav;
