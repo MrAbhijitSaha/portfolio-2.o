@@ -3,8 +3,18 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import ThemeChangeBtn from "../ThemeChangeBtn";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 const NavLogoAndThemeBtnContainer = () => {
 	const { theme } = useTheme();
+	const [mounted, setMounted] = useState(false);
+
+	useEffect(() => {
+		setMounted(true);
+	}, []);
+
+	if (!mounted) {
+		return null;
+	}
 	return (
 		<search>
 			<div className="flex items-center gap-5">
