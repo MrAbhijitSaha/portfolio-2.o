@@ -27,7 +27,7 @@ export default function RootLayout({ children }: RootLayoutPropsType) {
 					<header className="border-gray-700 border-b">
 						<Navswitch />
 					</header>
-					<main className="container mx-auto px-16 md:px-32">
+					<main className="container mx-auto px-8 md:px-32">
 						{children}
 					</main>
 				</ThemeProvider>
