@@ -1,6 +1,7 @@
-import { FaGithub } from "react-icons/fa";
-import LinkBtn from "../CustomeComponents/LinkBtn";
+import { FaFile } from "react-icons/fa";
+import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 import { TypewriterEffect } from "../ui/typewriter-effect";
+import Link from "next/link";
 
 const HomeHero = () => {
 	const typeWritterEffectWords = [
@@ -23,14 +24,15 @@ const HomeHero = () => {
 			<div className="text-foreground/40">
 				Fresher passionate about Full Stack Development.
 			</div>
-			<div className="">
-				<LinkBtn
-					href="/"
-					icon={<FaGithub />}
-					className="">
-					Github
-				</LinkBtn>
-			</div>
+			<Link
+				href={
+					"https://drive.google.com/file/d/1nsUXJ29tUW33f87OuPeyIBUcBDyVPDYe/view?usp=sharing"
+				}
+				target="_blank">
+				<InteractiveHoverButton icon={<FaFile />}>
+					Resume
+				</InteractiveHoverButton>
+			</Link>
 		</section>
 	);
 };

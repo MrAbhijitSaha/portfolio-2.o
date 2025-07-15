@@ -15,7 +15,7 @@ const LinkBtn = ({ href, icon, children, className }: LinkBtnPropsType) => {
 			<Link
 				href={href}
 				className={cn(
-					`flex items-center gap-1.5 rounded bg-blue-700 hover:bg-blue-600 w-fit text-white py-2 px-4`,
+					`flex w-fit items-center gap-1.5 rounded bg-blue-700 px-4 py-2 text-white hover:bg-blue-600`,
 					className,
 				)}>
 				{icon}
