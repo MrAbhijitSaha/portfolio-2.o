@@ -1,5 +1,12 @@
+import AboutmeSection from "@/components/AboutPage/AboutmeSection";
+
 const page = () => {
-	return <div>this is about page</div>;
+	return (
+		<section>
+			<div className=""></div>
+			<AboutmeSection />
+		</section>
+	);
 };
 
 export default page;
