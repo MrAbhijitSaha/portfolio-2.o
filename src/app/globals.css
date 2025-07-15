@@ -3,6 +3,12 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+@theme {
+  --font-michroma: --font-michroma;
+  --font-dosis: --font-dosis
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
