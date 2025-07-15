@@ -3,6 +3,7 @@ import "./globals.css";
 import { ReactNode } from "react";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navswitch from "@/components/Navbars/Navswitch";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -24,12 +25,15 @@ export default function RootLayout({ children }: RootLayoutPropsType) {
 					defaultTheme="light"
 					enableSystem
 					disableTransitionOnChange>
-					<header className="border-gray-700 border-b">
+					<header className="border-b border-gray-700">
 						<Navswitch />
 					</header>
 					<main className="container mx-auto px-8 md:px-32">
 						{children}
 					</main>
+					<footer>
+						<Footer />
+					</footer>
 				</ThemeProvider>
 			</body>
 		</html>

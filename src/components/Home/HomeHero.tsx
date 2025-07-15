@@ -14,7 +14,7 @@ const HomeHero = () => {
 	];
 
 	return (
-		<section className="space-y-2 py-16 md:space-y-2.5 md:py-32">
+		<section className="space-y-2 py-16 md:space-y-2.5 md:py-40">
 			<div className="text-blue-700">{"Hey there!, I'm"}</div>
 			<TypewriterEffect
 				words={typeWritterEffectWords}

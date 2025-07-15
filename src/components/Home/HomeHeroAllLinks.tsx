@@ -1,6 +1,5 @@
-import { FaFile, FaGithub } from "react-icons/fa";
+import { FaFile } from "react-icons/fa";
 import LinkBtn from "../CustomeComponents/LinkBtn";
-import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 
 const HomeHeroAllLinks = () => {
 	return (
