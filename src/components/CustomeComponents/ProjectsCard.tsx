@@ -14,7 +14,7 @@ const ProjectsCard = () => {
 								src={`/${item.image}.png`}
 								alt={item.alt}
 								fill
-								className="rounded-t-lg object-cover"
+								className="rounded-t-lg border-b object-cover"
 							/>
 						</div>
 						<div className="space-y-3 p-4">
