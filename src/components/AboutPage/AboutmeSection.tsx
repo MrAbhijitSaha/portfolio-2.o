@@ -1,8 +1,8 @@
 const AboutmeSection = () => {
 	return (
-		<section className="font-dosis space-y-2.5 py-24">
+		<section className="space-y-2.5 py-24">
 			<div className="">
-				<div className="text-lg">Meet Abhijit</div>
+				<div className="pb-2.5 text-xl md:text-2xl">Meet Abhijit</div>
 				<div className="">
 					A passionate{" "}
 					<span className="text-blue-700"> Frontend Developer </span>{" "}
