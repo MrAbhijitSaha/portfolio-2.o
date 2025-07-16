@@ -25,7 +25,7 @@ export default function RootLayout({ children }: RootLayoutPropsType) {
 					defaultTheme="light"
 					enableSystem
 					disableTransitionOnChange>
-					<header className="border-b border-gray-700">
+					<header className="sticky top-0 z-30 border-b border-gray-700 backdrop-blur-lg">
 						<Navswitch />
 					</header>
 					<main className="container mx-auto px-8 md:px-32">
