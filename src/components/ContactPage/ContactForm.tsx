@@ -13,6 +13,8 @@ import {
 } from "../ui/form";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import { BiLoader } from "react-icons/bi";
+import { FiArrowRightCircle } from "react-icons/fi";
 
 const ContactForm = () => {
 	async function handleSubmit(value: ContactSchemaType) {
@@ -33,6 +35,14 @@ const ContactForm = () => {
 		if (result.success) {
 			console.log(result);
 		}
+		return new Promise<void>((resolve) => {
+			setTimeout(() => {
+				resolve();
+				console.log(value);
+				contactForm.reset();
+				// notify();
+			}, 2000);
+		});
 	}
 
 	const contactForm = useForm<ContactSchemaType>({
@@ -76,7 +86,17 @@ const ContactForm = () => {
 							</FormItem>
 						)}
 					/>
-					<Button type="submit">SEND</Button>
+					<Button type="submit">
+						{contactForm.formState.isSubmitting ? (
+							<>
+								<BiLoader className="animate-spin" /> Loging....
+							</>
+						) : (
+							<>
+								<FiArrowRightCircle /> SEND
+							</>
+						)}
+					</Button>
 				</form>
 			</Form>
 		</section>
