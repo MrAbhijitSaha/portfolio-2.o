@@ -1,8 +1,11 @@
 "use client";
 
 import { contactSchema, ContactSchemaType } from "@/lib/schema";
+import { showErrorToast, showSuccessToast } from "@/lib/toast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { BiLoader } from "react-icons/bi";
+import { Button } from "../ui/button";
 import {
 	Form,
 	FormControl,
@@ -12,39 +15,8 @@ import {
 	FormMessage,
 } from "../ui/form";
 import { Input } from "../ui/input";
-import { Button } from "../ui/button";
-import { BiLoader } from "react-icons/bi";
-import { FiArrowRightCircle } from "react-icons/fi";
 
 const ContactForm = () => {
-	async function handleSubmit(value: ContactSchemaType) {
-		const response = await fetch("https://api.web3forms.com/submit", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-				Accept: "application/json",
-			},
-			body: JSON.stringify({
-				access_key: "b333bf5b-8758-4aff-a972-89bc09943e0b",
-				name: value.name,
-				email: value.email,
-			}),
-		});
-
-		const result = await response.json();
-		if (result.success) {
-			console.log(result);
-		}
-		return new Promise<void>((resolve) => {
-			setTimeout(() => {
-				resolve();
-				console.log(value);
-				contactForm.reset();
-				// notify();
-			}, 2000);
-		});
-	}
-
 	const contactForm = useForm<ContactSchemaType>({
 		resolver: zodResolver(contactSchema),
 		defaultValues: {
@@ -53,6 +25,43 @@ const ContactForm = () => {
 		},
 		mode: "all",
 	});
+
+	async function handleSubmit(value: ContactSchemaType) {
+		try {
+			const response = await fetch("https://api.web3forms.com/submit", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json",
+				},
+				body: JSON.stringify({
+					access_key: "b333bf5b-8758-4aff-a972-89bc09943e0b",
+					name: value.name,
+					email: value.email,
+				}),
+			});
+
+			const result = await response.json();
+			if (result.success) {
+				console.log(result);
+				return new Promise<void>((resolve) => {
+					setTimeout(() => {
+						resolve();
+						console.log(value);
+						contactForm.reset();
+						showSuccessToast();
+					}, 2000);
+				});
+			} else {
+				showErrorToast(
+					"Unable to send message. Try later or email me directly.",
+				);
+			}
+		} catch (error) {
+			console.error("Submit failed:", error);
+			showErrorToast();
+		}
+	}
 
 	return (
 		<section>
@@ -92,9 +101,7 @@ const ContactForm = () => {
 								<BiLoader className="animate-spin" /> Loging....
 							</>
 						) : (
-							<>
-								<FiArrowRightCircle /> SEND
-							</>
+							<>SEND</>
 						)}
 					</Button>
 				</form>
