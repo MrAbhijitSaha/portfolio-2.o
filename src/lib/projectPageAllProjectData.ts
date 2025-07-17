@@ -37,7 +37,7 @@ export const projectPageAllProjectData = [
 		alt: "Project 2",
 		name: "Gaming Website Clone",
 		gitlink: "",
-		hostlink: "",
+		hostlink: "https://gameboiz.netlify.app",
 		skill: [
 			{
 				id: "01",
@@ -57,11 +57,203 @@ export const projectPageAllProjectData = [
 	},
 	{
 		id: "03",
+		image: "resturent",
+		alt: "Project 3",
+		name: "Loan Calculator",
+		gitlink: "",
+		hostlink: "https://resturent-bar.netlify.app",
+		skill: [
+			{
+				id: "01",
+				one: "Html",
+			},
+			{
+				id: "02",
+				one: "css",
+			},
+			{
+				id: "03",
+				one: "javascript",
+			},
+		],
+
+		description: `A sleek, user-friendly loan calculator web app designed to help users easily estimate monthly payments, total interest, and total repayment amount for different loan scenarios. Built with modern web technologies, this calculator allows users to input loan amount, interest rate, and loan term, and instantly see clear, precise results in a clean, intuitive interface.`,
+	},
+	{
+		id: "04",
+		image: "aquream",
+		alt: "Project 3",
+		name: "Loan Calculator",
+		gitlink: "",
+		hostlink: "https://fish-aquarium.netlify.app",
+		skill: [
+			{
+				id: "01",
+				one: "Html",
+			},
+			{
+				id: "02",
+				one: "css",
+			},
+			{
+				id: "03",
+				one: "javascript",
+			},
+		],
+
+		description: `A sleek, user-friendly loan calculator web app designed to help users easily estimate monthly payments, total interest, and total repayment amount for different loan scenarios. Built with modern web technologies, this calculator allows users to input loan amount, interest rate, and loan term, and instantly see clear, precise results in a clean, intuitive interface.`,
+	},
+	{
+		id: "05",
+		image: "fakeloginform",
+		alt: "Project 3",
+		name: "Loan Calculator",
+		gitlink: "",
+		hostlink: "https://fake-loginform.netlify.app",
+		skill: [
+			{
+				id: "01",
+				one: "Html",
+			},
+			{
+				id: "02",
+				one: "css",
+			},
+			{
+				id: "03",
+				one: "javascript",
+			},
+		],
+
+		description: `A sleek, user-friendly loan calculator web app designed to help users easily estimate monthly payments, total interest, and total repayment amount for different loan scenarios. Built with modern web technologies, this calculator allows users to input loan amount, interest rate, and loan term, and instantly see clear, precise results in a clean, intuitive interface.`,
+	},
+	{
+		id: "06",
+		image: "dataentry",
+		alt: "Project 3",
+		name: "Loan Calculator",
+		gitlink: "",
+		hostlink: "https://admin-data-entry.netlify.app",
+		skill: [
+			{
+				id: "01",
+				one: "Html",
+			},
+			{
+				id: "02",
+				one: "css",
+			},
+			{
+				id: "03",
+				one: "javascript",
+			},
+		],
+
+		description: `A sleek, user-friendly loan calculator web app designed to help users easily estimate monthly payments, total interest, and total repayment amount for different loan scenarios. Built with modern web technologies, this calculator allows users to input loan amount, interest rate, and loan term, and instantly see clear, precise results in a clean, intuitive interface.`,
+	},
+	{
+		id: "07",
 		image: "loancalculatorproject",
 		alt: "Project 3",
 		name: "Loan Calculator",
 		gitlink: "",
-		hostlink: "",
+		hostlink: "https://loan-calculator3.netlify.app",
+		skill: [
+			{
+				id: "01",
+				one: "Html",
+			},
+			{
+				id: "02",
+				one: "css",
+			},
+			{
+				id: "03",
+				one: "javascript",
+			},
+		],
+
+		description: `A sleek, user-friendly loan calculator web app designed to help users easily estimate monthly payments, total interest, and total repayment amount for different loan scenarios. Built with modern web technologies, this calculator allows users to input loan amount, interest rate, and loan term, and instantly see clear, precise results in a clean, intuitive interface.`,
+	},
+	{
+		id: "08",
+		image: "agecalculator",
+		alt: "Project 3",
+		name: "Loan Calculator",
+		gitlink: "",
+		hostlink: "https://agecalculator3.netlify.app",
+		skill: [
+			{
+				id: "01",
+				one: "Html",
+			},
+			{
+				id: "02",
+				one: "css",
+			},
+			{
+				id: "03",
+				one: "javascript",
+			},
+		],
+
+		description: `A sleek, user-friendly loan calculator web app designed to help users easily estimate monthly payments, total interest, and total repayment amount for different loan scenarios. Built with modern web technologies, this calculator allows users to input loan amount, interest rate, and loan term, and instantly see clear, precise results in a clean, intuitive interface.`,
+	},
+	{
+		id: "09",
+		image: "calculator",
+		alt: "Project 3",
+		name: "Loan Calculator",
+		gitlink: "",
+		hostlink: "https://num-calculator1.netlify.app",
+		skill: [
+			{
+				id: "01",
+				one: "Html",
+			},
+			{
+				id: "02",
+				one: "css",
+			},
+			{
+				id: "03",
+				one: "javascript",
+			},
+		],
+
+		description: `A sleek, user-friendly loan calculator web app designed to help users easily estimate monthly payments, total interest, and total repayment amount for different loan scenarios. Built with modern web technologies, this calculator allows users to input loan amount, interest rate, and loan term, and instantly see clear, precise results in a clean, intuitive interface.`,
+	},
+	{
+		id: "10",
+		image: "digitalclock",
+		alt: "Project 3",
+		name: "Loan Calculator",
+		gitlink: "",
+		hostlink: "https://digital-clock-0011.netlify.app",
+		skill: [
+			{
+				id: "01",
+				one: "Html",
+			},
+			{
+				id: "02",
+				one: "css",
+			},
+			{
+				id: "03",
+				one: "javascript",
+			},
+		],
+
+		description: `A sleek, user-friendly loan calculator web app designed to help users easily estimate monthly payments, total interest, and total repayment amount for different loan scenarios. Built with modern web technologies, this calculator allows users to input loan amount, interest rate, and loan term, and instantly see clear, precise results in a clean, intuitive interface.`,
+	},
+	{
+		id: "11",
+		image: "newyearmessage",
+		alt: "Project 3",
+		name: "Loan Calculator",
+		gitlink: "",
+		hostlink: "https://new-year-coundown.netlify.app",
 		skill: [
 			{
 				id: "01",

@@ -6,7 +6,7 @@ import { SiGithub } from "react-icons/si";
 
 const ProjectPageProjectsCard = () => {
 	return (
-		<section className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+		<section className="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">
 			{projectPageAllProjectData.map((item) => {
 				return (
 					<div
