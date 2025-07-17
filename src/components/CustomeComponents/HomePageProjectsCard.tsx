@@ -1,7 +1,7 @@
 import { ProjectsSectionmapData } from "@/lib/homepageprojectsSectionmapData";
 import Image from "next/image";
 
-const ProjectsCard = () => {
+const HomePageProjectsCard = () => {
 	return (
 		<section className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
 			{ProjectsSectionmapData.map((item) => {
@@ -42,4 +42,4 @@ const ProjectsCard = () => {
 		</section>
 	);
 };
-export default ProjectsCard;
+export default HomePageProjectsCard;

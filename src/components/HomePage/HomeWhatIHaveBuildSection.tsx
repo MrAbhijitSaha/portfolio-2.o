@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ProjectsCard from "../CustomeComponents/HomePageProjectsCard";
+import HomePageProjectsCard from "../CustomeComponents/HomePageProjectsCard";
 
 const HomeWhatIHaveBuildSection = () => {
 	return (
@@ -8,7 +8,8 @@ const HomeWhatIHaveBuildSection = () => {
 				Things I’ve Built 💪🏽
 			</div>
 
-			<ProjectsCard />
+			<HomePageProjectsCard />
+
 			<Link
 				href={"/projects"}
 				className="text-blue-700">
