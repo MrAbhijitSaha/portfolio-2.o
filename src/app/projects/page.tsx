@@ -1,5 +1,11 @@
+import ProjectPageProjectsCard from "@/components/CustomeComponents/Cards/ProjectPageProjectsCard";
+
 const page = () => {
-	return <div>This is projects page</div>;
+	return (
+		<>
+			<ProjectPageProjectsCard />
+		</>
+	);
 };
 
 export default page;

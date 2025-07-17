@@ -1,9 +1,12 @@
 import { projectPageAllProjectData } from "@/lib/projectPageAllProjectData";
 import Image from "next/image";
+import Link from "next/link";
+import { FiExternalLink } from "react-icons/fi";
+import { SiGithub } from "react-icons/si";
 
-const ProjectsCard = () => {
+const ProjectPageProjectsCard = () => {
 	return (
-		<section className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+		<section className="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">
 			{projectPageAllProjectData.map((item) => {
 				return (
 					<div
@@ -17,7 +20,15 @@ const ProjectsCard = () => {
 								className="rounded-t-lg border-b object-cover"
 							/>
 						</div>
-						<div className="space-y-3 p-4">
+						<div className="relative space-y-3 p-4">
+							<div className="absolute end-0 flex gap-2 px-4">
+								<Link href={item.gitlink}>
+									<SiGithub />
+								</Link>
+								<Link href={item.hostlink}>
+									<FiExternalLink />{" "}
+								</Link>
+							</div>
 							<div className="text-lg font-semibold">
 								{item.name}
 							</div>
@@ -42,4 +53,4 @@ const ProjectsCard = () => {
 		</section>
 	);
 };
-export default ProjectsCard;
+export default ProjectPageProjectsCard;
