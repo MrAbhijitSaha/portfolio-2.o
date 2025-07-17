@@ -5,7 +5,7 @@ export const projectPageAllProjectData = [
 		alt: "Project 1",
 		name: "Personal Portfolio",
 		gitlink: "",
-		hostlink: "",
+		hostlink: "https://abhijitsaha.vercel.app/",
 		skill: [
 			{
 				id: "01",
