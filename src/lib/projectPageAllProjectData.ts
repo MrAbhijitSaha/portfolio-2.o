@@ -2,7 +2,7 @@ export const projectPageAllProjectData = [
 	{
 		id: "01",
 		image: "portfolioproject",
-		alt: "Project 1",
+		alt: "Portfolio",
 		name: "Personal Portfolio",
 		gitlink: "",
 		hostlink: "https://abhijitsaha.vercel.app/",
@@ -34,7 +34,7 @@ export const projectPageAllProjectData = [
 	{
 		id: "02",
 		image: "gameproject",
-		alt: "Project 2",
+		alt: "gaming",
 		name: "Gaming Website Clone",
 		gitlink: "",
 		hostlink: "https://gameboiz.netlify.app",
@@ -58,8 +58,8 @@ export const projectPageAllProjectData = [
 	{
 		id: "03",
 		image: "resturent",
-		alt: "Project 3",
-		name: "Loan Calculator",
+		alt: "Resturent",
+		name: "Resturent website Clone",
 		gitlink: "",
 		hostlink: "https://resturent-bar.netlify.app",
 		skill: [
@@ -82,8 +82,8 @@ export const projectPageAllProjectData = [
 	{
 		id: "04",
 		image: "aquream",
-		alt: "Project 3",
-		name: "Loan Calculator",
+		alt: "Aqurium",
+		name: "Aquarium Website Clone",
 		gitlink: "",
 		hostlink: "https://fish-aquarium.netlify.app",
 		skill: [
@@ -106,8 +106,8 @@ export const projectPageAllProjectData = [
 	{
 		id: "05",
 		image: "fakeloginform",
-		alt: "Project 3",
-		name: "Loan Calculator",
+		alt: "Login",
+		name: "Fake Login Form",
 		gitlink: "",
 		hostlink: "https://fake-loginform.netlify.app",
 		skill: [
@@ -130,8 +130,8 @@ export const projectPageAllProjectData = [
 	{
 		id: "06",
 		image: "dataentry",
-		alt: "Project 3",
-		name: "Loan Calculator",
+		alt: "User Management System",
+		name: "User Management System",
 		gitlink: "",
 		hostlink: "https://admin-data-entry.netlify.app",
 		skill: [
@@ -154,7 +154,7 @@ export const projectPageAllProjectData = [
 	{
 		id: "07",
 		image: "loancalculatorproject",
-		alt: "Project 3",
+		alt: "Loan Calculator",
 		name: "Loan Calculator",
 		gitlink: "",
 		hostlink: "https://loan-calculator3.netlify.app",
@@ -178,8 +178,8 @@ export const projectPageAllProjectData = [
 	{
 		id: "08",
 		image: "agecalculator",
-		alt: "Project 3",
-		name: "Loan Calculator",
+		alt: "Age calculator",
+		name: "Age Calculator",
 		gitlink: "",
 		hostlink: "https://agecalculator3.netlify.app",
 		skill: [
@@ -202,8 +202,8 @@ export const projectPageAllProjectData = [
 	{
 		id: "09",
 		image: "calculator",
-		alt: "Project 3",
-		name: "Loan Calculator",
+		alt: "Calculator",
+		name: "Calculator",
 		gitlink: "",
 		hostlink: "https://num-calculator1.netlify.app",
 		skill: [
@@ -226,8 +226,8 @@ export const projectPageAllProjectData = [
 	{
 		id: "10",
 		image: "digitalclock",
-		alt: "Project 3",
-		name: "Loan Calculator",
+		alt: "Digital Clock",
+		name: "Digital Clock",
 		gitlink: "",
 		hostlink: "https://digital-clock-0011.netlify.app",
 		skill: [
@@ -250,8 +250,8 @@ export const projectPageAllProjectData = [
 	{
 		id: "11",
 		image: "newyearmessage",
-		alt: "Project 3",
-		name: "Loan Calculator",
+		alt: "New Year Message",
+		name: "New Year Coundown",
 		gitlink: "",
 		hostlink: "https://new-year-coundown.netlify.app",
 		skill: [
