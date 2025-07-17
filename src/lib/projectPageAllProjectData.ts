@@ -4,6 +4,8 @@ export const projectPageAllProjectData = [
 		image: "portfolioproject",
 		alt: "Project 1",
 		name: "Personal Portfolio",
+		gitlink: "",
+		hostlink: "",
 		skill: [
 			{
 				id: "01",
@@ -34,6 +36,8 @@ export const projectPageAllProjectData = [
 		image: "gameproject",
 		alt: "Project 2",
 		name: "Gaming Website Clone",
+		gitlink: "",
+		hostlink: "",
 		skill: [
 			{
 				id: "01",
@@ -56,6 +60,8 @@ export const projectPageAllProjectData = [
 		image: "loancalculatorproject",
 		alt: "Project 3",
 		name: "Loan Calculator",
+		gitlink: "",
+		hostlink: "",
 		skill: [
 			{
 				id: "01",
