@@ -1,4 +1,4 @@
-import { ProjectsSectionmapData } from "@/lib/projectsSectionmapData";
+import { ProjectsSectionmapData } from "@/lib/homepageprojectsSectionmapData";
 import Image from "next/image";
 
 const ProjectsCard = () => {
