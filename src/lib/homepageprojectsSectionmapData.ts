@@ -1,4 +1,4 @@
-export const ProjectsSectionmapData = [
+export const HomePageProjectsSectionmapData = [
 	{
 		id: "01",
 		image: "portfolioproject",

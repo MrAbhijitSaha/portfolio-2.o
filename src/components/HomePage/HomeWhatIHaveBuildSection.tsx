@@ -1,5 +1,5 @@
 import Link from "next/link";
-import HomePageProjectsCard from "../CustomeComponents/HomePageProjectsCard";
+import HomePageProjectsCard from "../CustomeComponents/Cards/HomePageProjectsCard";
 
 const HomeWhatIHaveBuildSection = () => {
 	return (
