@@ -8,7 +8,7 @@ export const showSuccessToast = (
 		autoClose: 1000,
 		hideProgressBar: true,
 		closeOnClick: true,
-		pauseOnHover: true,
+		pauseOnHover: false,
 		draggable: true,
 		theme: "colored",
 		transition: Slide,
@@ -16,14 +16,14 @@ export const showSuccessToast = (
 };
 
 export const showErrorToast = (
-	message: string = "Oops! Something went wrong. Please try again.",
+	message: string = "Network Error. Try later or email me directly.",
 ) => {
 	toast.error(message, {
 		position: "bottom-right",
-		autoClose: 2000,
-		hideProgressBar: false,
+		autoClose: 1000,
+		hideProgressBar: true,
 		closeOnClick: true,
-		pauseOnHover: true,
+		pauseOnHover: false,
 		draggable: true,
 		theme: "colored",
 		transition: Slide,
