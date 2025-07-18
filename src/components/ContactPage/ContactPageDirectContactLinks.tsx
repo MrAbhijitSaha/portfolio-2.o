@@ -3,7 +3,7 @@ import Link from "next/link";
 const ContactPageDirectContactLinks = () => {
 	return (
 		<>
-			<div className="mt-10 text-center">
+			<div className="mt-10 py-8 text-center">
 				<p className="text-sm text-gray-400">Or reach me directly:</p>
 				<Link
 					href={

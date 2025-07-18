@@ -38,6 +38,7 @@ const ContactForm = () => {
 					access_key: "b333bf5b-8758-4aff-a972-89bc09943e0b",
 					name: value.name,
 					email: value.email,
+					message: value.message,
 				}),
 			});
 
@@ -125,7 +126,8 @@ const ContactForm = () => {
 					/>
 					<Button
 						type="submit"
-						className="bg-blue-700 px-12 py-6 text-white hover:bg-blue-900">
+						className="bg-blue-700 px-12 py-6 text-white hover:bg-blue-900"
+						disabled={contactForm.formState.isSubmitting}>
 						{contactForm.formState.isSubmitting ? (
 							<>
 								<BiLoader className="animate-spin" /> Loging....

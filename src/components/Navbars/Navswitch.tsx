@@ -3,7 +3,7 @@ import MobileNav from "./MobileNav";
 
 const Navswitch = () => {
 	return (
-		<header className="container mx-auto px-6 py-5">
+		<header className="container mx-auto px-6 py-3">
 			<section className="block md:hidden">
 				<MobileNav />
 			</section>
