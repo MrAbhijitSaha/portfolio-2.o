@@ -11,7 +11,6 @@ import {
 	FormControl,
 	FormField,
 	FormItem,
-	FormLabel,
 	FormMessage,
 } from "../ui/form";
 import { Input } from "../ui/input";
@@ -22,6 +21,7 @@ const ContactForm = () => {
 		defaultValues: {
 			name: "",
 			email: "",
+			message: "",
 		},
 		mode: "all",
 	});
@@ -64,18 +64,24 @@ const ContactForm = () => {
 	}
 
 	return (
-		<section>
+		<>
 			<Form {...contactForm}>
-				<form onSubmit={contactForm.handleSubmit(handleSubmit)}>
+				<form
+					onSubmit={contactForm.handleSubmit(handleSubmit)}
+					className="space-y-8">
 					{/* name */}
 					<FormField
 						control={contactForm.control}
 						name="name"
 						render={({ field }) => (
 							<FormItem>
-								<FormLabel>Enter Your Name</FormLabel>
 								<FormControl>
-									<Input {...field} />
+									<Input
+										{...field}
+										placeholder="Please Enter Your Name"
+										autoComplete="off"
+										className="focus-visible:border-primary rounded-none border-0 border-b border-b-blue-700 !bg-transparent !text-lg shadow-none focus-visible:border-b-blue-700 focus-visible:ring-0 focus-visible:ring-offset-0"
+									/>
 								</FormControl>
 								<FormMessage />
 							</FormItem>
@@ -87,15 +93,39 @@ const ContactForm = () => {
 						name="email"
 						render={({ field }) => (
 							<FormItem>
-								<FormLabel>Enter Your Email</FormLabel>
 								<FormControl>
-									<Input {...field} />
+									<Input
+										{...field}
+										placeholder="Please Enter Your Email"
+										autoComplete="off"
+										className="focus-visible:border-primary rounded-none border-0 border-b border-b-blue-700 !bg-transparent !text-lg shadow-none focus-visible:border-b-blue-700 focus-visible:ring-0 focus-visible:ring-offset-0"
+									/>
 								</FormControl>
 								<FormMessage />
 							</FormItem>
 						)}
 					/>
-					<Button type="submit">
+					{/* message */}
+					<FormField
+						control={contactForm.control}
+						name="message"
+						render={({ field }) => (
+							<FormItem>
+								<FormControl>
+									<Input
+										{...field}
+										placeholder="Write your message here..."
+										autoComplete="off"
+										className="focus-visible:border-primary rounded-none border-0 border-b border-b-blue-700 !bg-transparent !text-lg shadow-none focus-visible:border-b-blue-700 focus-visible:ring-0 focus-visible:ring-offset-0"
+									/>
+								</FormControl>
+								<FormMessage />
+							</FormItem>
+						)}
+					/>
+					<Button
+						type="submit"
+						className="bg-blue-700 px-12 py-6 text-white hover:bg-blue-900">
 						{contactForm.formState.isSubmitting ? (
 							<>
 								<BiLoader className="animate-spin" /> Loging....
@@ -106,7 +136,7 @@ const ContactForm = () => {
 					</Button>
 				</form>
 			</Form>
-		</section>
+		</>
 	);
 };
 
