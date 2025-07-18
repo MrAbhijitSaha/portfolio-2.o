@@ -10,8 +10,14 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import NavLogoAndThemeBtnContainer from "./NavLogoAndThemeBtnContainer";
+import { usePathname } from "next/navigation";
+import { navLinks } from "@/lib/navLinkOptions";
 
 const MobileNav = () => {
+	const pathname = usePathname();
+
+
+
 	return (
 		<section className="flex justify-between">
 			<NavLogoAndThemeBtnContainer />
@@ -26,7 +32,7 @@ const MobileNav = () => {
 						<SheetTitle>
 							<Link href={"/"}>
 								<Image
-									src={"/logo.png"}
+									src={"/logogray.png"}
 									alt="logo"
 									height={100}
 									width={100}
@@ -34,19 +40,26 @@ const MobileNav = () => {
 								/>
 							</Link>
 						</SheetTitle>
-						<div className="grid place-items-center gap-3 py-10">
-							<SheetClose asChild>
-								<Link href={"/"}>Home</Link>
-							</SheetClose>
-							<SheetClose asChild>
-								<Link href={"/about"}>About</Link>
-							</SheetClose>
-							<SheetClose asChild>
-								<Link href={"/projects"}>Projects</Link>
-							</SheetClose>
-							<SheetClose asChild>
-								<Link href={"/contact"}>Contact</Link>
-							</SheetClose>
+						<div className="grid place-items-center gap-4 py-10 text-lg font-medium">
+							{navLinks.map((link) => {
+								const isActive = pathname === link.href;
+
+								return (
+									<SheetClose
+										asChild
+										key={link.href}>
+										<Link
+											href={link.href}
+											className={`transition-colors duration-200 ${
+												isActive
+													? "text-blue-700 underline underline-offset-8"
+													: "text-foreground hover:text-blue-700"
+											}`}>
+											{link.label}
+										</Link>
+									</SheetClose>
+								);
+							})}
 						</div>
 					</SheetHeader>
 				</SheetContent>
