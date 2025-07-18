@@ -55,7 +55,7 @@ const ContactForm = () => {
 				});
 			} else {
 				showErrorToast(
-					"Unable to send message. Try later or email me directly.",
+					"Network Error. Try later or email me directly.",
 				);
 			}
 		} catch (error) {
