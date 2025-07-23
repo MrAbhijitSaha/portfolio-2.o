@@ -11,7 +11,11 @@ const Footer = () => {
 					LinkedIn
 				</Link>
 				&nbsp;|&nbsp;
-				<Link href={"mailto:your-email@example.com"}>Email Me</Link>
+				<Link
+					href={"mailto:your-email@example.com"}
+					target="_blank">
+					Email Me
+				</Link>
 			</div>
 		</section>
 	);
