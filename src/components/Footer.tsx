@@ -11,12 +11,7 @@ const Footer = () => {
 					LinkedIn
 				</Link>
 				&nbsp;|&nbsp;
-				<Link
-					href={
-						"https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNvMZDBzcZQfZZlCDpxKpGWhpCNvgSjflNcdtbrSXZFCsJZkpWwPMrhRnCDHHnrxczlMXV"
-					}>
-					Email Me
-				</Link>
+				<Link href={"mailto:your-email@example.com"}>Email Me</Link>
 			</div>
 		</section>
 	);
