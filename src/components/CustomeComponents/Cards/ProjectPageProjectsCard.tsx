@@ -2,7 +2,6 @@ import { projectPageAllProjectData } from "@/lib/projectPageAllProjectData";
 import Image from "next/image";
 import Link from "next/link";
 import { FiExternalLink } from "react-icons/fi";
-import { SiGithub } from "react-icons/si";
 
 const ProjectPageProjectsCard = () => {
 	return (
@@ -22,9 +21,9 @@ const ProjectPageProjectsCard = () => {
 						</div>
 						<div className="relative space-y-3 p-4">
 							<div className="absolute end-0 top-0 flex gap-2 px-4 pt-2">
-								<Link href={item.gitlink}>
+								{/* <Link href={item.gitlink}>
 									<SiGithub />
-								</Link>
+								</Link> */}
 								<Link href={item.hostlink}>
 									<FiExternalLink />{" "}
 								</Link>
