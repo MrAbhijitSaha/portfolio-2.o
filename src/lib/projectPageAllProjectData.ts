@@ -77,7 +77,7 @@ export const projectPageAllProjectData = [
 			},
 		],
 
-		description: `A sleek, user-friendly loan calculator web app designed to help users easily estimate monthly payments, total interest, and total repayment amount for different loan scenarios. Built with modern web technologies, this calculator allows users to input loan amount, interest rate, and loan term, and instantly see clear, precise results in a clean, intuitive interface.`,
+		description: `A fully responsive restaurant landing page clone designed to showcase a modern dining experience. This project features elegant typography, high-quality imagery, and a visually appealing layout that highlights the restaurant's menu, ambiance, and services. Smooth scrolling and intuitive navigation ensure an enjoyable browsing experience across all devices.`,
 	},
 	{
 		id: "04",
@@ -101,7 +101,7 @@ export const projectPageAllProjectData = [
 			},
 		],
 
-		description: `A sleek, user-friendly loan calculator web app designed to help users easily estimate monthly payments, total interest, and total repayment amount for different loan scenarios. Built with modern web technologies, this calculator allows users to input loan amount, interest rate, and loan term, and instantly see clear, precise results in a clean, intuitive interface.`,
+		description: `A responsive clone of a vibrant aquarium-themed website designed to highlight marine life and underwater attractions. The layout features a clean interface, calming blue tones, and smooth animations to mimic the serenity of an actual aquarium experience. Built to practice visual hierarchy, layout structuring, and responsive design techniques.`,
 	},
 	{
 		id: "05",
@@ -125,7 +125,9 @@ export const projectPageAllProjectData = [
 			},
 		],
 
-		description: `A sleek, user-friendly loan calculator web app designed to help users easily estimate monthly payments, total interest, and total repayment amount for different loan scenarios. Built with modern web technologies, this calculator allows users to input loan amount, interest rate, and loan term, and instantly see clear, precise results in a clean, intuitive interface.`,
+		description: `A minimal and responsive mock login form designed to replicate a basic user authentication interface. Built using HTML, CSS, and JavaScript, this project focuses on clean form styling, input validation concepts, and responsive layout. Ideal for practicing UI form structure and front-end logic without backend integration.
+
+`,
 	},
 	{
 		id: "06",
@@ -149,7 +151,9 @@ export const projectPageAllProjectData = [
 			},
 		],
 
-		description: `A sleek, user-friendly loan calculator web app designed to help users easily estimate monthly payments, total interest, and total repayment amount for different loan scenarios. Built with modern web technologies, this calculator allows users to input loan amount, interest rate, and loan term, and instantly see clear, precise results in a clean, intuitive interface.`,
+		description: `A responsive web interface for managing user data through basic CRUD operations. This project demonstrates how to add, edit, and delete user entries using JavaScript, with a clean and functional UI. Designed to strengthen front-end logic handling, dynamic DOM manipulation, and layout responsiveness.
+
+`,
 	},
 	{
 		id: "07",
@@ -173,7 +177,9 @@ export const projectPageAllProjectData = [
 			},
 		],
 
-		description: `A sleek, user-friendly loan calculator web app designed to help users easily estimate monthly payments, total interest, and total repayment amount for different loan scenarios. Built with modern web technologies, this calculator allows users to input loan amount, interest rate, and loan term, and instantly see clear, precise results in a clean, intuitive interface.`,
+		description: `A simple and responsive loan calculator web app that helps users estimate monthly payments based on loan amount, interest rate, and duration. Designed with a clean layout and intuitive input fields, this project focuses on real-time calculations and user-friendly interaction using vanilla JavaScript.
+
+`,
 	},
 	{
 		id: "08",
@@ -197,7 +203,9 @@ export const projectPageAllProjectData = [
 			},
 		],
 
-		description: `A sleek, user-friendly loan calculator web app designed to help users easily estimate monthly payments, total interest, and total repayment amount for different loan scenarios. Built with modern web technologies, this calculator allows users to input loan amount, interest rate, and loan term, and instantly see clear, precise results in a clean, intuitive interface.`,
+		description: `A clean and interactive age calculator that allows users to input their birth date and instantly see their exact age in years, months, and days. Built with a focus on accurate date handling and responsive design, this project showcases the use of JavaScript's Date object for practical real-world functionality.
+
+`,
 	},
 	{
 		id: "09",
@@ -221,7 +229,9 @@ export const projectPageAllProjectData = [
 			},
 		],
 
-		description: `A sleek, user-friendly loan calculator web app designed to help users easily estimate monthly payments, total interest, and total repayment amount for different loan scenarios. Built with modern web technologies, this calculator allows users to input loan amount, interest rate, and loan term, and instantly see clear, precise results in a clean, intuitive interface.`,
+		description: `A clean and interactive calculator built with HTML, CSS, and JavaScript. This project supports basic arithmetic operations with a responsive layout that mimics a real-world calculator. The focus is on smooth user interaction, input handling, and a visually intuitive UI that performs calculations in real-time.
+
+`,
 	},
 	{
 		id: "10",
@@ -245,7 +255,9 @@ export const projectPageAllProjectData = [
 			},
 		],
 
-		description: `A sleek, user-friendly loan calculator web app designed to help users easily estimate monthly payments, total interest, and total repayment amount for different loan scenarios. Built with modern web technologies, this calculator allows users to input loan amount, interest rate, and loan term, and instantly see clear, precise results in a clean, intuitive interface.`,
+		description: `A real-time digital clock that displays the current hours, minutes, and seconds using JavaScript. Styled with a sleek and minimal design, this project focuses on working with time-based functions and updating the UI dynamically. It's a simple yet practical example of DOM manipulation and time handling in JavaScript.
+
+`,
 	},
 	{
 		id: "11",
@@ -269,6 +281,8 @@ export const projectPageAllProjectData = [
 			},
 		],
 
-		description: `A sleek, user-friendly loan calculator web app designed to help users easily estimate monthly payments, total interest, and total repayment amount for different loan scenarios. Built with modern web technologies, this calculator allows users to input loan amount, interest rate, and loan term, and instantly see clear, precise results in a clean, intuitive interface.`,
+		description: `An interactive New Year countdown celebration experience. When the user clicks the button, a dramatic countdown from 10 to 0 begins, building excitement. As it hits zero, a vibrant animation plays with firecracker sounds, festive visuals, and a “Happy New Year” message — all synchronized with background music. This project blends JavaScript timing functions, media playback, and user-triggered events to deliver a fun, engaging celebration moment.
+
+`,
 	},
 ];
