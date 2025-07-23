@@ -12,7 +12,9 @@ const Footer = () => {
 				</Link>
 				&nbsp;|&nbsp;
 				<Link
-					href={"mailto:your-email@example.com"}
+					href={
+						"https://.google.com/mail/u/0/#inbox?compose=CllgCJNvMZDBzcZQfZZlCDpxKpGWhpCNvgSjflNcdtbrSXZFCsJZkpWwPMrhRnCDHHnrxczlMXV"
+					}
 					target="_blank">
 					Email Me
 				</Link>
