@@ -54,9 +54,7 @@ const ContactForm = () => {
 					}, 2000);
 				});
 			} else {
-				showErrorToast(
-					"Network Error. Try later or email me directly.",
-				);
+				showErrorToast("Oops! Something went wrong. Please try again.");
 			}
 		} catch (error) {
 			console.error("Submit failed:", error);
