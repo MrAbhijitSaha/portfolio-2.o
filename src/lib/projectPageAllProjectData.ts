@@ -1,5 +1,61 @@
 export const projectPageAllProjectData = [
 	{
+		id: "00",
+		image: "comingsoon",
+		alt: "Coming soon",
+		name: "More Projects Coming Soon",
+		gitlink: "",
+		hostlink: "https://upcomingprojects.netlify.app/",
+		skill: [
+			{
+				id: "01",
+				one: "html",
+			},
+			{
+				id: "02",
+				one: "css",
+			},
+			{
+				id: "03",
+				one: "javascript",
+			},
+			{
+				id: "04",
+				one: "bootstrap",
+			},
+			{
+				id: "05",
+				one: "react",
+			},
+			{
+				id: "06",
+				one: "react",
+			},
+			{
+				id: "07",
+				one: "react",
+			},
+			{
+				id: "08",
+				one: "next.js",
+			},
+			{
+				id: "09",
+				one: "tailwind css",
+			},
+			{
+				id: "10",
+				one: "shadcn/ui",
+			},
+			{
+				id: "11",
+				one: "magic/ui",
+			},
+		],
+
+		description: `Stay tuned to see upcoming projects`,
+	},
+	{
 		id: "01",
 		image: "portfolioproject",
 		alt: "Portfolio",
@@ -17,14 +73,18 @@ export const projectPageAllProjectData = [
 			},
 			{
 				id: "03",
-				one: "tailwind css",
+				one: "typescript",
 			},
 			{
 				id: "04",
-				one: "shadcn/ui",
+				one: "tailwind css",
 			},
 			{
 				id: "05",
+				one: "shadcn/ui",
+			},
+			{
+				id: "06",
 				one: "magic/ui",
 			},
 		],
