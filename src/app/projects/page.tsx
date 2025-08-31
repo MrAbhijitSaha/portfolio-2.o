@@ -1,4 +1,4 @@
-import ProjectPageProjectsCard from "@/components/CustomeComponents/Cards/ProjectPageProjectsCard";
+import ProjectPageProjectCardMap from "@/components/CustomeComponents/Cards/CardMap/ProjectPageProjectCardMap";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,11 +8,9 @@ export const metadata: Metadata = {
 	keywords: ["Abhijit Saha", "frontend developer", "React", "portfolio"],
 };
 const page = () => {
-	return (
-		<>
-			<ProjectPageProjectsCard />
-		</>
-	);
+	return <>
+	<ProjectPageProjectCardMap/>
+	</>;
 };
 
 export default page;
