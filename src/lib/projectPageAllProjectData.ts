@@ -6,50 +6,50 @@ export const projectPageAllProjectData = [
 		name: "More Projects Coming Soon",
 		gitlink: "",
 		hostlink: "https://upcomingprojects.netlify.app/",
-		skill: [
+		skills: [
 			{
 				id: "01",
-				one: "html",
+				skill: "html",
 			},
 			{
 				id: "02",
-				one: "css",
+				skill: "css",
 			},
 			{
 				id: "03",
-				one: "javascript",
+				skill: "javascript",
 			},
 			{
 				id: "04",
-				one: "bootstrap",
+				skill: "bootstrap",
 			},
 			{
 				id: "05",
-				one: "react",
+				skill: "react",
 			},
 			{
 				id: "06",
-				one: "react",
+				skill: "react",
 			},
 			{
 				id: "07",
-				one: "react",
+				skill: "react",
 			},
 			{
 				id: "08",
-				one: "next.js",
+				skill: "next.js",
 			},
 			{
 				id: "09",
-				one: "tailwind css",
+				skill: "tailwind css",
 			},
 			{
 				id: "10",
-				one: "shadcn/ui",
+				skill: "shadcn/ui",
 			},
 			{
 				id: "11",
-				one: "magic/ui",
+				skill: "magic/ui",
 			},
 		],
 
@@ -62,30 +62,30 @@ export const projectPageAllProjectData = [
 		name: "Personal Portfolio",
 		gitlink: "",
 		hostlink: "https://abhijitsaha.vercel.app/",
-		skill: [
+		skills: [
 			{
 				id: "01",
-				one: "react",
+				skill: "react",
 			},
 			{
 				id: "02",
-				one: "next.js",
+				skill: "next.js",
 			},
 			{
 				id: "03",
-				one: "typescript",
+				skill: "typescript",
 			},
 			{
 				id: "04",
-				one: "tailwind css",
+				skill: "tailwind css",
 			},
 			{
 				id: "05",
-				one: "shadcn/ui",
+				skill: "shadcn/ui",
 			},
 			{
 				id: "06",
-				one: "magic/ui",
+				skill: "magic/ui",
 			},
 		],
 
@@ -95,73 +95,73 @@ export const projectPageAllProjectData = [
 		id: "02",
 		image: "gameproject",
 		alt: "gaming",
-		name: "Gaming Website Clone",
+		name: "Gaming Website Clskill",
 		gitlink: "",
 		hostlink: "https://gameboiz.netlify.app",
-		skill: [
+		skills: [
 			{
 				id: "01",
-				one: "Html",
+				skill: "Html",
 			},
 			{
 				id: "02",
-				one: "css",
+				skill: "css",
 			},
 			{
 				id: "03",
-				one: "javascript",
+				skill: "javascript",
 			},
 		],
 
-		description: `A responsive clone of a gaming-themed website that showcases game titles, news updates, and community events. The website features an engaging dark-themed design, interactive UI elements, and a visually immersive layout to capture the gaming aesthetic. The navigation is smooth, ensuring easy access to different game categories and content sections.`,
+		description: `A responsive clskill of a gaming-themed website that showcases game titles, news updates, and community events. The website features an engaging dark-themed design, interactive UI elements, and a visually immersive layout to capture the gaming aesthetic. The navigation is smooth, ensuring easy access to different game categories and content sections.`,
 	},
 	{
 		id: "03",
 		image: "resturent",
 		alt: "Resturent",
-		name: "Resturent website Clone",
+		name: "Resturent website Clskill",
 		gitlink: "",
 		hostlink: "https://resturent-bar.netlify.app",
-		skill: [
+		skills: [
 			{
 				id: "01",
-				one: "Html",
+				skill: "Html",
 			},
 			{
 				id: "02",
-				one: "css",
+				skill: "css",
 			},
 			{
 				id: "03",
-				one: "javascript",
+				skill: "javascript",
 			},
 		],
 
-		description: `A fully responsive restaurant landing page clone designed to showcase a modern dining experience. This project features elegant typography, high-quality imagery, and a visually appealing layout that highlights the restaurant's menu, ambiance, and services. Smooth scrolling and intuitive navigation ensure an enjoyable browsing experience across all devices.`,
+		description: `A fully responsive restaurant landing page clskill designed to showcase a modern dining experience. This project features elegant typography, high-quality imagery, and a visually appealing layout that highlights the restaurant's menu, ambiance, and services. Smooth scrolling and intuitive navigation ensure an enjoyable browsing experience across all devices.`,
 	},
 	{
 		id: "04",
 		image: "aquream",
 		alt: "Aqurium",
-		name: "Aquarium Website Clone",
+		name: "Aquarium Website Clskill",
 		gitlink: "",
 		hostlink: "https://fish-aquarium.netlify.app",
-		skill: [
+		skills: [
 			{
 				id: "01",
-				one: "Html",
+				skill: "Html",
 			},
 			{
 				id: "02",
-				one: "css",
+				skill: "css",
 			},
 			{
 				id: "03",
-				one: "javascript",
+				skill: "javascript",
 			},
 		],
 
-		description: `A responsive clone of a vibrant aquarium-themed website designed to highlight marine life and underwater attractions. The layout features a clean interface, calming blue tones, and smooth animations to mimic the serenity of an actual aquarium experience. Built to practice visual hierarchy, layout structuring, and responsive design techniques.`,
+		description: `A responsive clskill of a vibrant aquarium-themed website designed to highlight marine life and underwater attractions. The layout features a clean interface, calming blue tskills, and smooth animations to mimic the serenity of an actual aquarium experience. Built to practice visual hierarchy, layout structuring, and responsive design techniques.`,
 	},
 	{
 		id: "05",
@@ -170,18 +170,18 @@ export const projectPageAllProjectData = [
 		name: "Fake Login Form",
 		gitlink: "",
 		hostlink: "https://fake-loginform.netlify.app",
-		skill: [
+		skills: [
 			{
 				id: "01",
-				one: "Html",
+				skill: "Html",
 			},
 			{
 				id: "02",
-				one: "css",
+				skill: "css",
 			},
 			{
 				id: "03",
-				one: "javascript",
+				skill: "javascript",
 			},
 		],
 
@@ -196,18 +196,18 @@ export const projectPageAllProjectData = [
 		name: "User Management System",
 		gitlink: "",
 		hostlink: "https://admin-data-entry.netlify.app",
-		skill: [
+		skills: [
 			{
 				id: "01",
-				one: "Html",
+				skill: "Html",
 			},
 			{
 				id: "02",
-				one: "css",
+				skill: "css",
 			},
 			{
 				id: "03",
-				one: "javascript",
+				skill: "javascript",
 			},
 		],
 
@@ -222,18 +222,18 @@ export const projectPageAllProjectData = [
 		name: "Loan Calculator",
 		gitlink: "",
 		hostlink: "https://loan-calculator3.netlify.app",
-		skill: [
+		skills: [
 			{
 				id: "01",
-				one: "Html",
+				skill: "Html",
 			},
 			{
 				id: "02",
-				one: "css",
+				skill: "css",
 			},
 			{
 				id: "03",
-				one: "javascript",
+				skill: "javascript",
 			},
 		],
 
@@ -248,18 +248,18 @@ export const projectPageAllProjectData = [
 		name: "Age Calculator",
 		gitlink: "",
 		hostlink: "https://agecalculator3.netlify.app",
-		skill: [
+		skills: [
 			{
 				id: "01",
-				one: "Html",
+				skill: "Html",
 			},
 			{
 				id: "02",
-				one: "css",
+				skill: "css",
 			},
 			{
 				id: "03",
-				one: "javascript",
+				skill: "javascript",
 			},
 		],
 
@@ -274,18 +274,18 @@ export const projectPageAllProjectData = [
 		name: "Calculator",
 		gitlink: "",
 		hostlink: "https://num-calculator1.netlify.app",
-		skill: [
+		skills: [
 			{
 				id: "01",
-				one: "Html",
+				skill: "Html",
 			},
 			{
 				id: "02",
-				one: "css",
+				skill: "css",
 			},
 			{
 				id: "03",
-				one: "javascript",
+				skill: "javascript",
 			},
 		],
 
@@ -300,18 +300,18 @@ export const projectPageAllProjectData = [
 		name: "Digital Clock",
 		gitlink: "",
 		hostlink: "https://digital-clock-0011.netlify.app",
-		skill: [
+		skills: [
 			{
 				id: "01",
-				one: "Html",
+				skill: "Html",
 			},
 			{
 				id: "02",
-				one: "css",
+				skill: "css",
 			},
 			{
 				id: "03",
-				one: "javascript",
+				skill: "javascript",
 			},
 		],
 
@@ -326,18 +326,18 @@ export const projectPageAllProjectData = [
 		name: "New Year Coundown",
 		gitlink: "",
 		hostlink: "https://new-year-coundown.netlify.app",
-		skill: [
+		skills: [
 			{
 				id: "01",
-				one: "Html",
+				skill: "Html",
 			},
 			{
 				id: "02",
-				one: "css",
+				skill: "css",
 			},
 			{
 				id: "03",
-				one: "javascript",
+				skill: "javascript",
 			},
 		],
 
