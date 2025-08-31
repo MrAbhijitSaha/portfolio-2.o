@@ -1,37 +1,36 @@
-import { ProjectCardDataType } from "@/lib/alltypes";
+import { ProjectPageProjectsCardPropsType } from "@/lib/alltypes";
 import Image from "next/image";
 import Link from "next/link";
 import { FiExternalLink } from "react-icons/fi";
+import { SiGithub } from "react-icons/si";
 
-const ProjectPageProjectsCard = (item:ProjectCardDataType) => {
+const ProjectPageProjectsCard = ({
+	data,
+}: ProjectPageProjectsCardPropsType) => {
 	return (
-		<div className="border-border rounded-lg border transition-all
-			hover:shadow-md">
-		
+		<div className="border-border rounded-lg border transition-all hover:shadow-md">
 			<div className="relative aspect-video w-full overflow-hidden">
 				<Image
-					src={`/${item.image}.png`}
-					alt={`Project: ${item.alt}`}
+					src={`/${data.image}.png`}
+					alt={`Project: ${data.alt}`}
 					fill
 					className="rounded-t-lg border-b object-cover"
 				/>
 			</div>
 			<div className="relative space-y-3 p-4">
-				<div className="absolute end-0 top-0 flex gap-2 px-4 pt-2">
-					{/* <Link href={item.gitlink}>
-									<SiGithub />
-								</Link> */}
-					<Link href={item.hostlink}>
-						<FiExternalLink />
+				<div className="absolute end-0 top-0 flex gap-3 px-4 pt-4">
+					<Link href={data.gitlink}>
+						<SiGithub />
 					</Link>
-					<Link href={item.hostlink}>
+
+					<Link href={data.hostlink}>
 						<FiExternalLink />
 					</Link>
 				</div>
-				<div className="pt-3 text-lg font-semibold">{item.name}</div>
+				<div className="pt-3 text-lg font-semibold">{data.name}</div>
 
 				<div className="flex flex-wrap gap-2">
-					{item.skills.map((i) => (
+					{data.skills.map((i) => (
 						<span
 							className="text-primary rounded-full bg-blue-700/20 px-3 py-1 text-sm uppercase"
 							key={i.id}>
@@ -41,7 +40,7 @@ const ProjectPageProjectsCard = (item:ProjectCardDataType) => {
 				</div>
 
 				<div className="text-muted-foreground text-sm">
-					{item.description}
+					{data.description}
 				</div>
 			</div>
 		</div>

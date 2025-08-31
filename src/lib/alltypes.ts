@@ -1,3 +1,8 @@
+type SkillType = {
+	id: string;
+	skill: string;
+};
+
 export type ProjectCardDataType = {
 	id: string;
 	image: string;
@@ -5,6 +10,10 @@ export type ProjectCardDataType = {
 	name: string;
 	gitlink: string;
 	hostlink: string;
-	skills: [{ id: string; skill: string }];
+	skills: SkillType[];
 	description: string;
+};
+
+export type ProjectPageProjectsCardPropsType = {
+	data: ProjectCardDataType;
 };
