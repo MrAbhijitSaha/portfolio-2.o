@@ -3,6 +3,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --cursor-custom: url('/cursor.png'), auto;
+}
+
+* {
+  cursor: var(--cursor-custom) !important;
+}
 
 @theme {
   --font-michroma: --font-michroma;

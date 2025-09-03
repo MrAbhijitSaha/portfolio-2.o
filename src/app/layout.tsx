@@ -13,7 +13,7 @@ export default function RootLayout({ children }: RootLayoutPropsType) {
 		<html
 			lang="en"
 			suppressHydrationWarning>
-			<body>
+			<body className="cursor-custom selection:bg-red-400 selection:text-white">
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="light"
