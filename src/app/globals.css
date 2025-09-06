@@ -3,6 +3,32 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Modern minimal scrollbar */
+* {
+  scrollbar-width: none;
+  scrollbar-color: #88888800 #f1f1f1;
+}
+
+*::-webkit-scrollbar {
+  width:0px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ff000000;
+  border-radius: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #ffffff5e;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #ffffff66;
+}
+
+
+
 @theme {
   --cursor-custom: url('/cursor.png'), auto;
 }
@@ -133,4 +159,9 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+::view-transition-old(root), ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
 }

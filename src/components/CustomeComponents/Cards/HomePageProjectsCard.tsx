@@ -11,7 +11,7 @@ const HomePageProjectsCard = () => {
 						key={item.id}>
 						<div className="relative aspect-video w-full overflow-hidden">
 							<Image
-								src={`/${item.image}.png`}
+								src={`/projects/${item.image}.png`}
 								alt={item.alt}
 								fill
 								className="rounded-t-lg border-b object-cover"

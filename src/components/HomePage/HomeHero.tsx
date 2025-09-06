@@ -1,7 +1,8 @@
+import Link from "next/link";
 import { FaFile } from "react-icons/fa";
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
+import { WordRotate } from "../magicui/word-rotate";
 import { TypewriterEffect } from "../ui/typewriter-effect";
-import Link from "next/link";
 
 const HomeHero = () => {
 	const typeWritterEffectWords = [
@@ -20,7 +21,14 @@ const HomeHero = () => {
 				words={typeWritterEffectWords}
 				className="text-start !text-3xl md:!text-7xl"
 			/>
-			<div className="">Frontend Developer.</div>
+			<WordRotate
+				words={[
+					"Front-End Developer",
+					"Full-Stack Developer",
+					"Graphic Designer",
+					"Web Developer",
+				]}
+			/>
 			<div className="text-foreground/40">
 				Fresher passionate about Full Stack Development.
 			</div>

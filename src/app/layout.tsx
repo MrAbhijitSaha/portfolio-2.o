@@ -19,7 +19,7 @@ export default function RootLayout({ children }: RootLayoutPropsType) {
 					defaultTheme="light"
 					enableSystem
 					disableTransitionOnChange>
-					<header className="sticky top-0 z-30 border-b border-gray-700 backdrop-blur-lg">
+					<header className="md:sticky top-6 z-30 md:border md:border-e-0 md:rounded-full md:ms-12 md:rounded-e-none border-gray-700 backdrop-blur-lg">
 						<Navswitch />
 					</header>
 					<main className="container mx-auto px-8 md:px-32">

@@ -9,9 +9,9 @@ const ProjectPageProjectsCard = ({
 }: ProjectPageProjectsCardPropsType) => {
 	return (
 		<div className="border-border rounded-lg border transition-all hover:shadow-md">
-			<div className="relative aspect-video w-full overflow-hidden">
+			<div className="relative aspect-video w-full overflow-hidden -z-10">
 				<Image
-					src={`/${data.image}.png`}
+					src={`/projects/${data.image}.png`}
 					alt={`Project: ${data.alt}`}
 					fill
 					className="rounded-t-lg border-b object-cover"
