@@ -58,7 +58,9 @@ export function Particles({
         new THREE.Float32BufferAttribute(vertices, 3)
       );
 
-      const sprite = new THREE.TextureLoader().load("/disc.png");
+      const sprite = new THREE.TextureLoader().load(
+			"/not-found-page-image/disc.png",
+		);
       material = new THREE.PointsMaterial({
         size: particleSize,
         sizeAttenuation: true,

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import HomePageProjectsCard from "../CustomeComponents/Cards/HomePageProjectsCard";
+import { CursorHighlight } from "../ui/cursor-highlight";
 
 const HomeWhatIHaveBuildSection = () => {
 	return (
@@ -10,10 +11,11 @@ const HomeWhatIHaveBuildSection = () => {
 
 			<HomePageProjectsCard />
 
-			<Link
-				href={"/projects"}
-				className="text-blue-700">
-				Explore More What I’ve Created ✌🏽
+			<Link href={"/projects"}>
+				<CursorHighlight gradient="from-red-500  to-red-500">
+					Explore More What I’ve Created
+				</CursorHighlight>
+				✌🏽
 			</Link>
 		</section>
 	);

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatedTextGenerate } from "../ui/animated-textgenerate";
+import { CursorHighlight } from "../ui/cursor-highlight";
 
 const HomeAboutMeSection = () => {
 	return (
@@ -131,10 +132,11 @@ improve my knowledge to stay current in the space."
 						exploring new design trends or honing my skills through
 						side projects and continuous learning.
 					</div> */}
-					<Link
-						href={"/contact"}
-						className="text-blue-700">
-						Let’s build something amazing together!🔥
+					<Link href={"/contact"}>
+						<CursorHighlight gradient="from-red-500  to-red-500">
+							Let’s build something amazing together!
+						</CursorHighlight>
+						🔥
 					</Link>
 				</div>
 				<Image

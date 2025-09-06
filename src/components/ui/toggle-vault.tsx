@@ -72,7 +72,7 @@ export const ToggleVault: React.FC<ToggleVaultProps> = ({
 		<VaultContext.Provider value={{ open, toggleOpen, closeVault }}>
 			<div
 				ref={vaultRef}
-				className={` h-full min-h-[350px] w-full ${className}`}>
+				className={`h-full min-h-[350px] w-full ${className}`}>
 				{children}
 			</div>
 		</VaultContext.Provider>
@@ -98,7 +98,7 @@ export const ToggleVaultTrigger: React.FC<TriggerProps> = ({
 		<motion.div
 			onClick={toggleOpen}
 			aria-expanded={open}
-			className={`absolute top-4 right-4 z-50 flex h-[40px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-black text-white shadow-lg transition-all duration-300 hover:scale-105 dark:bg-white dark:text-black ${className} `}>
+			className={`absolute top-4 right-4 z-[999] flex h-[40px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-black text-white shadow-lg transition-all duration-300 hover:scale-105 dark:bg-white dark:text-black ${className} `}>
 			<motion.span
 				initial={{ y: -10, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
@@ -131,7 +131,8 @@ export const ToggleVaultClose: React.FC<CloseProps> = ({
 			initial={{ y: 10, opacity: 0 }}
 			animate={{ y: 0, opacity: 1 }}
 			exit={{ y: -10, opacity: 0 }}
-			className={`absolute top-4 right-4 z-50 flex h-[40px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-white font-bold text-black shadow-lg transition-all duration-300 hover:scale-105 dark:bg-black dark:text-white ${className} `}>
+			// CHANGED: Changed from absolute to fixed positioning and increased z-index to z-[9999] to appear on top of all page content
+			className={`fixed top-4 right-4 z-[9999] flex h-[40px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-white font-bold text-black shadow-lg transition-all duration-300 hover:scale-105 dark:bg-black dark:text-white ${className} `}>
 			{children}
 		</motion.div>
 	);
@@ -178,7 +179,8 @@ export const ToggleVaultContent: React.FC<ContentProps> = ({
 						opacity: 0,
 						transition: { duration: 0.6, ease: [0.2, 0.9, 0.3, 1] },
 					}}
-					className={`absolute z-40 overflow-hidden rounded-2xl bg-black text-white shadow-lg dark:bg-white dark:text-black ${className} `}
+					// CHANGED: Increased backdrop blur from backdrop-blur-2xl to backdrop-blur-3xl for blurrier background
+					className={`absolute z-40 overflow-hidden rounded-2xl bg-[#30303041] text-black shadow-lg backdrop-blur-3xl dark:bg-[#ffffff38] dark:text-white ${className} `}
 					style={{ transformOrigin: "top right" }}
 					aria-hidden={!open}>
 					<motion.div

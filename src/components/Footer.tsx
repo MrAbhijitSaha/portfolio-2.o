@@ -13,7 +13,7 @@ const Footer = () => {
 				&nbsp;|&nbsp;
 				<Link
 					href={
-						"https://.google.com/mail/u/0/#inbox?compose=CllgCJNvMZDBzcZQfZZlCDpxKpGWhpCNvgSjflNcdtbrSXZFCsJZkpWwPMrhRnCDHHnrxczlMXV"
+						"https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNvMZDBzcZQfZZlCDpxKpGWhpCNvgSjflNcdtbrSXZFCsJZkpWwPMrhRnCDHHnrxczlMXV"
 					}
 					target="_blank">
 					Email Me

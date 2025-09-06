@@ -19,107 +19,111 @@ interface NotFoundProps {
 }
 
 export default function NotFoundPageContent({
-  particleCount = 12500,
-  particleSize = 5,
-  animate = false,
-  imageLight = "/404-lightc.png",
-  imageDark = "/404-darkc.png",
-  buttonText = "Back to Home",
-  buttonHref = "/",
-  className = "",
-  onButtonClick,
+	particleCount = 12500,
+	particleSize = 5,
+	animate = false,
+	imageLight = "/not-found-page-image/404-lightc.png",
+	imageDark = "/not-found-page-image/404-darkc.png",
+	buttonText = "Back to Home",
+	buttonHref = "/",
+	className = "",
+	onButtonClick,
 }: NotFoundProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
-  const [isDark, setIsDark] = useState(false);
+	const containerRef = useRef<HTMLDivElement>(null);
+	const imageRef = useRef<HTMLDivElement>(null);
+	const [isDark, setIsDark] = useState(false);
 
-  useEffect(() => {
-    const observer = () => {
-      const html = document.documentElement;
-      setIsDark(html.classList.contains("dark"));
-    };
+	useEffect(() => {
+		const observer = () => {
+			const html = document.documentElement;
+			setIsDark(html.classList.contains("dark"));
+		};
 
-    observer();
+		observer();
 
-    const mutationObserver = new MutationObserver(observer);
-    mutationObserver.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"],
-    });
+		const mutationObserver = new MutationObserver(observer);
+		mutationObserver.observe(document.documentElement, {
+			attributes: true,
+			attributeFilter: ["class"],
+		});
 
-    return () => mutationObserver.disconnect();
-  }, []);
+		return () => mutationObserver.disconnect();
+	}, []);
 
-  const handleMouseMove = (e: MouseEvent) => {
-    const container = containerRef.current;
-    const image = imageRef.current;
-    if (!container || !image) return;
+	const handleMouseMove = (e: MouseEvent) => {
+		const container = containerRef.current;
+		const image = imageRef.current;
+		if (!container || !image) return;
 
-    const { left, top, width, height } = container.getBoundingClientRect();
-    const x = e.clientX - left;
-    const y = e.clientY - top;
+		const { left, top, width, height } = container.getBoundingClientRect();
+		const x = e.clientX - left;
+		const y = e.clientY - top;
 
-    const rotateX = ((y - height / 2) / height) * -10;
-    const rotateY = ((x - width / 2) / width) * 10;
+		const rotateX = ((y - height / 2) / height) * -10;
+		const rotateY = ((x - width / 2) / width) * 10;
 
-    image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  };
+		image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+	};
 
-  const handleMouseLeave = () => {
-    if (imageRef.current) {
-      imageRef.current.style.transform = "rotateX(0deg) rotateY(0deg)";
-    }
-  };
+	const handleMouseLeave = () => {
+		if (imageRef.current) {
+			imageRef.current.style.transform = "rotateX(0deg) rotateY(0deg)";
+		}
+	};
 
-  return (
-    <div
-      ref={containerRef}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      className={`relative h-[24rem] md:h-screen w-full flex items-center justify-center overflow-hidden bg-white dark:bg-black ${className}`}
-      style={{ perspective: "1000px" }}
-    >
-      <Particles
-        color={isDark ? "#ffffff" : "#000000"}
-        particleCount={particleCount}
-        particleSize={particleSize}
-        animate={animate}
-        className="absolute inset-0 z-0"
-      />
+	return (
+		<div
+			ref={containerRef}
+			onMouseMove={handleMouseMove}
+			onMouseLeave={handleMouseLeave}
+			className={`relative flex h-[24rem] w-full items-center justify-center overflow-hidden bg-white md:h-screen dark:bg-black ${className}`}
+			style={{ perspective: "1000px" }}>
+			<Particles
+				color={isDark ? "#ffffff" : "#000000"}
+				particleCount={particleCount}
+				particleSize={particleSize}
+				animate={animate}
+				className="absolute inset-0 z-0"
+			/>
 
-      <div
-        ref={imageRef}
-        className="absolute inset-0 w-full h-full transition-transform duration-300 ease-out will-change-transform pointer-events-none z-10"
-      >
-        <Image
-          src={imageLight}
-          alt="404 Light"
-          fill
-          className="object-contain dark:hidden"
-          priority
-        />
-        <Image
-          src={imageDark}
-          alt="404 Dark"
-          fill
-          className="object-contain hidden dark:block"
-          priority
-        />
-      </div>
+			<div
+				ref={imageRef}
+				className="pointer-events-none absolute inset-0 z-10 h-full w-full transition-transform duration-300 ease-out will-change-transform">
+				<Image
+					src={imageLight}
+					alt="404 Light"
+					fill
+					className="object-contain dark:hidden"
+					priority
+				/>
+				<Image
+					src={imageDark}
+					alt="404 Dark"
+					fill
+					className="hidden object-contain dark:block"
+					priority
+				/>
+			</div>
 
-      <Particles
-        color={isDark ? "#ffffff" : "#000000"}
-        particleCount={particleCount}
-        particleSize={particleSize}
-        animate={animate}
-        className="absolute inset-0 z-20 pointer-events-none"
-      />
+			<Particles
+				color={isDark ? "#ffffff" : "#000000"}
+				particleCount={particleCount}
+				particleSize={particleSize}
+				animate={animate}
+				className="pointer-events-none absolute inset-0 z-20"
+			/>
 
-      <div className="relative z-30 mt-16 md:mt-0">
-        <Link href={buttonHref} onClick={onButtonClick}>
-          <Button variant="default" className="px-12 py-6">{buttonText}</Button>
-        </Link>
-      </div>
-    </div>
-  );
+			<div className="relative z-30 mt-16 md:mt-0">
+				<Link
+					href={buttonHref}
+					onClick={onButtonClick}>
+					<Button
+						variant="default"
+						className="px-12 py-6">
+						{buttonText}
+					</Button>
+				</Link>
+			</div>
+		</div>
+	);
 }

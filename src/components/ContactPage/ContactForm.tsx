@@ -1,10 +1,11 @@
 "use client";
 
+import { triggerConfetti } from "@/lib/confettiAnimationonFormSubmit";
 import { contactSchema, ContactSchemaType } from "@/lib/schema";
 import { showErrorToast, showSuccessToast } from "@/lib/toast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { BiLoader } from "react-icons/bi";
+
 import { Button } from "../ui/button";
 import {
 	Form,
@@ -51,7 +52,8 @@ const ContactForm = () => {
 						console.log(value);
 						contactForm.reset();
 						showSuccessToast();
-					}, 2000);
+						triggerConfetti();
+					}, 1000);
 				});
 			} else {
 				showErrorToast("Oops! Something went wrong. Please try again.");
@@ -127,11 +129,9 @@ const ContactForm = () => {
 						className="bg-blue-700 px-12 py-6 text-white hover:bg-blue-900"
 						disabled={contactForm.formState.isSubmitting}>
 						{contactForm.formState.isSubmitting ? (
-							<>
-								<BiLoader className="animate-spin" /> Loging....
-							</>
+							<>Sending your message...</>
 						) : (
-							<>SEND</>
+							<>SEND MESSAGE</>
 						)}
 					</Button>
 				</form>
