@@ -47,7 +47,7 @@ export function CursorHighlight({
   className,
   gradient = "from-purple-800 via-purple-600 to-purple-800",
   direction = "left",
-  animate = false,
+  // animate = false,
   duration = 2,
   showPointer = false,
   pointerDuration = 1,
