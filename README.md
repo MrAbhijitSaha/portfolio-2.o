@@ -33,7 +33,7 @@ If you’d like to run this project locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/portfolio.git
+git clone https://github.com/abhijit-542/portfolio-2.o.git
 
 # Navigate into the project
 cd portfolio
