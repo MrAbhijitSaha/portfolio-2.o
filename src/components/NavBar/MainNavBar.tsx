@@ -1,3 +1,5 @@
+"use client";
+
 import { useTheme } from "next-themes";
 import { Lamphome } from "../ui/lamphome";
 
@@ -6,7 +8,9 @@ const MainNavBar = () => {
 
 	return (
 		<Lamphome
-			logoSrc={theme === "dark" ? "/logowhite.png" : "/logo.png"}
+			logoSrc={
+				theme === "dark" ? "/logo/logowhite.png" : "/logo/logo.png"
+			}
 			logoAlt="My Logo"
 			navItems={[
 				{ href: "/", label: "Home" },
