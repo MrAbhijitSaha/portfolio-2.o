@@ -10,7 +10,7 @@
 }
 
 *::-webkit-scrollbar {
-  width:0px;
+  width: 0px;
 }
 
 *::-webkit-scrollbar-track {
@@ -27,8 +27,6 @@
   background: #ffffff66;
 }
 
-
-
 @theme {
   --cursor-custom: url('/cursor.png'), auto;
 }
@@ -39,7 +37,10 @@
 
 @theme {
   --font-michroma: --font-michroma;
-  --font-dosis: --font-dosis
+  --font-dosis: --font-dosis;
+  --font-sourceserif: --sourceserif;
+  --font-robotoslab: --robotoslab;
+  --font-bodonimoda: --bodonimoda;
 }
 
 @theme inline {
@@ -80,6 +81,21 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --animate-shiny-text: shiny-text 8s infinite;
+
+  @keyframes shiny-text {
+
+    0%,
+    90%,
+    100% {
+      background-position: calc(-100% - var(--shiny-width)) 0;
+    }
+
+    30%,
+    60% {
+      background-position: calc(100% + var(--shiny-width)) 0;
+    }
+  }
 }
 
 :root {
@@ -161,7 +177,8 @@
   }
 }
 
-::view-transition-old(root), ::view-transition-new(root) {
-    animation: none;
-    mix-blend-mode: normal;
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }
