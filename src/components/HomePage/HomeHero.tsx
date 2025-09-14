@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaFile } from "react-icons/fa";
+import { AnimatedShinyText } from "../magicui/animated-shiny-text";
 import { InteractiveHoverButton } from "../magicui/interactive-hover-button";
 import { WordRotate } from "../magicui/word-rotate";
 import { TypewriterEffect } from "../ui/typewriter-effect";
@@ -15,29 +16,36 @@ const HomeHero = () => {
 	];
 
 	return (
-		<section className="space-y-2 py-16 md:space-y-2.5 md:py-40">
-			<div className="text-blue-700">{"Hey there!, I'm"}</div>
+		<section className="space-y-2 py-20 md:space-y-4 md:py-40">
+			<div className="text-blue-700 md:text-xl">{"Hey there!, I'm"}</div>
 			<TypewriterEffect
 				words={typeWritterEffectWords}
-				className="text-start !text-3xl md:!text-7xl"
+				className="text-start !text-3xl md:!text-7xl lg:!text-9xl !font-bodonimoda"
 			/>
 			<WordRotate
 				words={[
-					"Front-End Developer",
-					"Full-Stack Developer",
+					"Front end developer",
+					"Full Stack Developer",
 					"Graphic Designer",
 					"Web Developer",
 				]}
+				className="md:text-xl"
 			/>
 			<div className="text-foreground/40">
-				Fresher passionate about Full Stack Development.
+				<AnimatedShinyText
+					shimmerWidth={500}
+					className="inline-flex items-center justify-center py-1 transition ease-out hover:text-neutral-600 hover:duration-300 md:text-xl hover:dark:text-neutral-400">
+					Fresher passionate about Full Stack Development.
+				</AnimatedShinyText>
 			</div>
 			<Link
 				href={
-					"https://drive.google.com/file/d/1nsUXJ29tUW33f87OuPeyIBUcBDyVPDYe/view?usp=sharing"
+					"https://drive.google.com/file/d/1ZSd3RVf1GgB9TsaTpHg8bjSNlXZoewN7/view?usp=sharing"
 				}
 				target="_blank">
-				<InteractiveHoverButton icon={<FaFile />}>
+				<InteractiveHoverButton
+					icon={<FaFile />}
+					className="border-red-500 py-4">
 					Resume
 				</InteractiveHoverButton>
 			</Link>

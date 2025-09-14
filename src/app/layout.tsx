@@ -22,7 +22,7 @@ export default function RootLayout({ children }: RootLayoutPropsType) {
 					<header>
 						<MainNavBar />
 					</header>
-					<main className="container mx-auto px-8 md:px-32">
+					<main className="font-robotoslab container mx-auto px-8 md:px-32">
 						{children}
 					</main>
 					<footer>
