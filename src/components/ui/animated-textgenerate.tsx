@@ -250,7 +250,7 @@ export const AnimatedTextGenerate = ({
 	};
 
 	return (
-		<div className={cn("font-bold", className)}>
+		<div className={cn("", className)}>
 			<div className="mt-4">
 				<div
 					className={cn(

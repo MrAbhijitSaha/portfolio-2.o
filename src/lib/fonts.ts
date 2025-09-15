@@ -1,4 +1,4 @@
-import { Bodoni_Moda, Dosis, Michroma, Roboto_Slab, Source_Serif_4 } from "next/font/google";
+import { Bodoni_Moda, Dosis, Michroma, Roboto, Roboto_Slab, Source_Serif_4 } from "next/font/google";
 
 export const michroma = Michroma({
 	subsets: ["latin"],
@@ -13,6 +13,13 @@ export const dosis = Dosis({
 	style: "normal",
 	display: "swap",
 	variable: "--font-dosis",
+});
+
+export const roboto = Roboto({
+	subsets: ["latin"],
+	style: "normal",
+	display: "swap",
+	variable: "--font-roboto",
 });
 
 export const SourceSerif = Source_Serif_4({
