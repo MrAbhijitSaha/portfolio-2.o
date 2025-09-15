@@ -37,10 +37,11 @@
 
 @theme {
   --font-michroma: --font-michroma;
-  --font-dosis: --font-dosis;
+  --font-dosis: --dosis;
   --font-sourceserif: --sourceserif;
   --font-robotoslab: --robotoslab;
   --font-bodonimoda: --bodonimoda;
+  --font-roboto: --roboto;
 }
 
 @theme inline {
