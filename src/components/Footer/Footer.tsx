@@ -1,17 +1,11 @@
 import Link from "next/link";
-import { Highlighter } from "../ui/magicui/highlighter";
-
 
 const Footer = () => {
 	return (
 		<section className="flex flex-col items-center gap-2 py-8 text-center text-sm md:text-base">
 			<span>
 				Designed & built with ❤️ by &nbsp;
-				<Highlighter
-					action="underline"
-					color="#F87171">
-					<span className="font-zeyada">Abhijit Saha.</span>
-				</Highlighter>
+				<span className="font-zeyada">Abhijit Saha.</span>
 			</span>
 			<div>
 				<Link
