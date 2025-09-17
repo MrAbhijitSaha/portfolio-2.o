@@ -1,7 +1,7 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Lamphome } from "../ui/lamphome";
+import { Lamphome } from "../ui/scrollxui/lamphome";
 
 const MainNavBar = () => {
 	const { theme } = useTheme();

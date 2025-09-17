@@ -1,17 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Highlighter } from "../magicui/highlighter";
-import { AnimatedTextGenerate } from "../ui/animated-textgenerate";
-import { CursorHighlight } from "../ui/cursor-highlight";
+import { AnimatedTextGenerate } from "../ui/scrollxui/animated-textgenerate";
+import { CursorHighlight } from "../ui/scrollxui/cursor-highlight";
 
 const HomeAboutMeSection = () => {
 	return (
 		<section className="py-5">
-			<Highlighter>
-				<div className="pb-2.5 text-xl md:text-2xl lg:text-4xl">
-					Who I Am 👀
-				</div>
-			</Highlighter>
+			<div className="pb-2.5 text-xl md:text-2xl lg:text-4xl">
+				Who I Am 👀
+			</div>
 
 			<div className="flex flex-col-reverse items-center justify-center gap-5 lg:flex-row">
 				<div className="text-foreground/65 space-y-2">

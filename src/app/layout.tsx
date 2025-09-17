@@ -1,6 +1,6 @@
-import Footer from "@/components/Footer";
+import Footer from "@/components/Footer/Footer";
 import MainNavBar from "@/components/NavBar/MainNavBar";
-import { ThemeProvider } from "@/components/ThemeProvider";
+import { ThemeProvider } from "@/components/ui/shadcnui/ThemeProvider";
 import { ReactNode } from "react";
 import "./globals.css";
 
@@ -16,7 +16,7 @@ export default function RootLayout({ children }: RootLayoutPropsType) {
 			<body className="cursor-custom selection:bg-red-400 selection:text-white">
 				<ThemeProvider
 					attribute="class"
-					defaultTheme="light"
+					defaultTheme="dark"
 					enableSystem
 					disableTransitionOnChange>
 					<header>
@@ -25,7 +25,7 @@ export default function RootLayout({ children }: RootLayoutPropsType) {
 					<main className="font-robotoslab container mx-auto px-8 md:px-32">
 						{children}
 					</main>
-					<footer>
+					<footer className="container mx-auto px-6">
 						<Footer />
 					</footer>
 				</ThemeProvider>

@@ -11,7 +11,7 @@ const ContactPageDirectContactLinks = () => {
 					}
 					className="mt-2"
 					target="_blank">
-					📧 work.abhijitsaha@gmail.com
+					work.abhijitsaha@gmail.com
 				</Link>
 			</div>
 		</>
