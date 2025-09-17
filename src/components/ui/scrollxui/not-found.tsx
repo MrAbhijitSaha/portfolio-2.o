@@ -1,21 +1,21 @@
 "use client";
 
-import { useRef, useEffect, useState, MouseEvent } from "react";
+import { Particles } from "@/components/ui/scrollxui/particles";
+import { Button } from "@/components/ui/shadcnui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { Particles } from "@/components/ui/particles";
-import { Button } from "@/components/ui/button";
+import { MouseEvent, useEffect, useRef, useState } from "react";
 
 interface NotFoundProps {
-  particleCount?: number;
-  particleSize?: number;
-  animate?: boolean;
-  imageLight?: string;
-  imageDark?: string;
-  buttonText?: string;
-  buttonHref?: string;
-  className?: string;
-  onButtonClick?: () => void;
+	particleCount?: number;
+	particleSize?: number;
+	animate?: boolean;
+	imageLight?: string;
+	imageDark?: string;
+	buttonText?: string;
+	buttonHref?: string;
+	className?: string;
+	onButtonClick?: () => void;
 }
 
 export default function NotFoundPageContent({

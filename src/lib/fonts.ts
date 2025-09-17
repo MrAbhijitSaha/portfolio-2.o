@@ -1,4 +1,12 @@
-import { Bodoni_Moda, Dosis, Michroma, Roboto, Roboto_Slab, Source_Serif_4 } from "next/font/google";
+import {
+	Bodoni_Moda,
+	Dosis,
+	Michroma,
+	Roboto,
+	Roboto_Slab,
+	Source_Serif_4,
+	Zeyada,
+} from "next/font/google";
 
 export const michroma = Michroma({
 	subsets: ["latin"],
@@ -22,20 +30,27 @@ export const roboto = Roboto({
 	variable: "--font-roboto",
 });
 
-export const SourceSerif = Source_Serif_4({
+export const sourceserif = Source_Serif_4({
 	subsets: ["latin"],
 	display: "swap",
 	variable: "--font-sourceserif",
 });
 
-export const RobotoSlab = Roboto_Slab({
+export const robotoslab = Roboto_Slab({
 	subsets: ["latin"],
 	display: "swap",
 	variable: "--font-robotoslab",
 });
 
-export const BodoniModa = Bodoni_Moda({
+export const bodonimoda = Bodoni_Moda({
 	subsets: ["latin"],
 	display: "swap",
 	variable: "--font-bodonimoda",
+});
+
+export const zeyada = Zeyada({
+	subsets: ["latin"],
+	weight: "400",
+	display: "swap",
+	variable: "--font-zeyada",
 });

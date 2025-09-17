@@ -1,6 +1,6 @@
 import Link from "next/link";
 import HomePageProjectsCard from "../CustomeComponents/Cards/HomePageProjectsCard";
-import { CursorHighlight } from "../ui/cursor-highlight";
+import { CursorHighlight } from "../ui/scrollxui/cursor-highlight";
 
 const HomeWhatIHaveBuildSection = () => {
 	return (

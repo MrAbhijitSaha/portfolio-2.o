@@ -6,15 +6,15 @@ import { showErrorToast, showSuccessToast } from "@/lib/toast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
-import { Button } from "../ui/button";
 import {
 	Form,
 	FormControl,
 	FormField,
 	FormItem,
 	FormMessage,
-} from "../ui/form";
-import { Input } from "../ui/input";
+} from "../ui/shadcnui/form";
+import { Input } from "../ui/shadcnui/input";
+import { Button } from "../ui/shadcnui/button";
 
 const ContactForm = () => {
 	const contactForm = useForm<ContactSchemaType>({
@@ -81,7 +81,7 @@ const ContactForm = () => {
 										{...field}
 										placeholder="Please Enter Your Name"
 										autoComplete="off"
-										className="focus-visible:border-primary rounded-none border-0 border-b border-b-blue-700 !bg-transparent !text-lg shadow-none focus-visible:border-b-blue-700 focus-visible:ring-0 focus-visible:ring-offset-0"
+										className="focus-visible:border-primary rounded-none border-0 border-b border-b-blue-700 !bg-transparent !text-sm shadow-none focus-visible:border-b-blue-700 focus-visible:ring-0 focus-visible:ring-offset-0 md:!text-lg"
 									/>
 								</FormControl>
 								<FormMessage />
@@ -99,7 +99,7 @@ const ContactForm = () => {
 										{...field}
 										placeholder="Please Enter Your Email"
 										autoComplete="off"
-										className="focus-visible:border-primary rounded-none border-0 border-b border-b-blue-700 !bg-transparent !text-lg shadow-none focus-visible:border-b-blue-700 focus-visible:ring-0 focus-visible:ring-offset-0"
+										className="focus-visible:border-primary rounded-none border-0 border-b border-b-blue-700 !bg-transparent !text-sm shadow-none focus-visible:border-b-blue-700 focus-visible:ring-0 focus-visible:ring-offset-0 md:!text-lg"
 									/>
 								</FormControl>
 								<FormMessage />
@@ -117,7 +117,7 @@ const ContactForm = () => {
 										{...field}
 										placeholder="Write your message here..."
 										autoComplete="off"
-										className="focus-visible:border-primary rounded-none border-0 border-b border-b-blue-700 !bg-transparent !text-lg shadow-none focus-visible:border-b-blue-700 focus-visible:ring-0 focus-visible:ring-offset-0"
+										className="focus-visible:border-primary rounded-none border-0 border-b border-b-blue-700 !bg-transparent !text-sm shadow-none focus-visible:border-b-blue-700 focus-visible:ring-0 focus-visible:ring-offset-0 md:!text-lg"
 									/>
 								</FormControl>
 								<FormMessage />
