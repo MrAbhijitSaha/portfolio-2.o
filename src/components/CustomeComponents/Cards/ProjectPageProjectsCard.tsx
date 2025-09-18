@@ -9,7 +9,7 @@ const ProjectPageProjectsCard = ({
 }: ProjectPageProjectsCardPropsType) => {
 	return (
 		<div className="border-border rounded-lg border transition-all hover:shadow-md">
-			<div className="relative aspect-video w-full overflow-hidden -z-10">
+			<div className="relative -z-10 aspect-video w-full overflow-hidden">
 				<Image
 					src={`/projects/${data.image}.png`}
 					alt={`Project: ${data.alt}`}
@@ -19,11 +19,15 @@ const ProjectPageProjectsCard = ({
 			</div>
 			<div className="relative space-y-3 p-4">
 				<div className="absolute end-0 top-0 flex gap-3 px-4 pt-4">
-					<Link href={data.gitlink}>
+					<Link
+						href={data.gitlink}
+						target="_blank">
 						<SiGithub />
 					</Link>
 
-					<Link href={data.hostlink}>
+					<Link
+						href={data.hostlink}
+						target="_blank">
 						<FiExternalLink />
 					</Link>
 				</div>
