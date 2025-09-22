@@ -1,21 +1,4 @@
-import { BsGit } from "react-icons/bs";
-import { IoLogoFigma, IoLogoReact } from "react-icons/io5";
-import {
-	SiAdobephotoshop,
-	SiBootstrap,
-	SiCss3,
-	SiGithub,
-	SiHtml5,
-	SiJavascript,
-	SiNetlify,
-	SiNextdotjs,
-	SiNodedotjs,
-	SiPython,
-	SiShadcnui,
-	SiTailwindcss,
-	SiTypescript,
-	SiVercel,
-} from "react-icons/si";
+import MySkillesStackSkillsCapsule from "../CustomeComponents/Cards/MySkillesStackSkillsCapsule";
 
 const MyDeveloperStackSection = () => {
 	return (
@@ -25,7 +8,7 @@ const MyDeveloperStackSection = () => {
 			</div>
 
 			<div className="space-y-5">
-				<div className="space-y-2">
+				{/* <div className="space-y-2">
 					<div className="text-2xl text-blue-700">Languages 🌐 </div>
 					<div className="flex flex-wrap items-center gap-2 py-2">
 						<div className="text-primary flex items-center gap-2 rounded-full bg-blue-700/20 px-3 py-1">
@@ -105,7 +88,9 @@ const MyDeveloperStackSection = () => {
 							<SiAdobephotoshop /> Photoshop
 						</div>
 					</div>
-				</div>
+				</div> */}
+
+				<MySkillesStackSkillsCapsule />
 			</div>
 		</>
 	);
