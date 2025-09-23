@@ -5,6 +5,7 @@ import {
 	Roboto,
 	Roboto_Slab,
 	Source_Serif_4,
+	Ubuntu,
 	Zeyada,
 } from "next/font/google";
 
@@ -33,19 +34,19 @@ export const roboto = Roboto({
 export const sourceserif = Source_Serif_4({
 	subsets: ["latin"],
 	display: "swap",
-	variable: "--font-sourceserif",
+	variable: "--font-source-serif",
 });
 
 export const robotoslab = Roboto_Slab({
 	subsets: ["latin"],
 	display: "swap",
-	variable: "--font-robotoslab",
+	variable: "--font-roboto-slab",
 });
 
 export const bodonimoda = Bodoni_Moda({
 	subsets: ["latin"],
 	display: "swap",
-	variable: "--font-bodonimoda",
+	variable: "--font-bodoni-moda",
 });
 
 export const zeyada = Zeyada({
@@ -54,3 +55,21 @@ export const zeyada = Zeyada({
 	display: "swap",
 	variable: "--font-zeyada",
 });
+
+export const ubuntu = Ubuntu({
+	subsets: ["latin"],
+	display: "swap",
+	variable: "--font-ubuntu",
+	weight: ["300", "400", "500", "700"],
+});
+
+export const allFontVariables = [
+	michroma.variable,
+	dosis.variable,
+	roboto.variable,
+	sourceserif.variable,
+	robotoslab.variable,
+	bodonimoda.variable,
+	zeyada.variable,
+	ubuntu.variable
+].join(" ");

@@ -18,7 +18,7 @@ const MainNavBar = () => {
 				{ href: "/projects", label: "Projects" },
 				{ href: "/contact", label: "Contact" },
 			]}
-			className=""
+			className="font-ubuntu"
 		/>
 	);
 };

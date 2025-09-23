@@ -1,9 +1,8 @@
 import Link from "next/link";
 import { FaFile } from "react-icons/fa";
+import { TypewriterEffect } from "../ui/aceternityui/typewriter-effect";
 import { AnimatedShinyText } from "../ui/magicui/animated-shiny-text";
 import { InteractiveHoverButton } from "../ui/magicui/interactive-hover-button";
-import { WordRotate } from "../ui/magicui/word-rotate";
-import { TypewriterEffect } from "../ui/aceternityui/typewriter-effect";
 
 const HomeHero = () => {
 	const typeWritterEffectWords = [
@@ -20,22 +19,14 @@ const HomeHero = () => {
 			<div className="text-blue-700 md:text-xl">{"Hey there!, I'm"}</div>
 			<TypewriterEffect
 				words={typeWritterEffectWords}
-				className="!font-bodonimoda text-start !text-3xl md:!text-7xl lg:!text-9xl"
+				className="font-bodonimoda text-start !text-3xl md:!text-7xl lg:!text-9xl"
 			/>
-			<WordRotate
-				words={[
-					"Front end developer",
-					"Full Stack Developer",
-					"Graphic Designer",
-					"Web Developer",
-				]}
-				className="md:text-xl"
-			/>
+
 			<div className="text-foreground/40">
 				<AnimatedShinyText
 					shimmerWidth={500}
 					className="inline-flex items-center justify-center py-1 transition ease-out hover:text-neutral-600 hover:duration-300 md:text-xl hover:dark:text-neutral-400">
-					Fresher passionate about Full Stack Development.
+					A Full Stack Developer
 				</AnimatedShinyText>
 			</div>
 			<Link

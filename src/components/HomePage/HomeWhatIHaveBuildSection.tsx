@@ -5,7 +5,7 @@ import { CursorHighlight } from "../ui/scrollxui/cursor-highlight";
 const HomeWhatIHaveBuildSection = () => {
 	return (
 		<section className="space-y-3 py-5">
-			<div className="pb-2.5 text-xl md:text-2xl">
+			<div className="pb-2.5 text-xl md:text-2xl lg:text-4xl">
 				Things I’ve Built 💪🏽
 			</div>
 
