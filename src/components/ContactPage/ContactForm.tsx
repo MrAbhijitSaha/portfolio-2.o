@@ -69,7 +69,7 @@ const ContactForm = () => {
 			<Form {...contactForm}>
 				<form
 					onSubmit={contactForm.handleSubmit(handleSubmit)}
-					className="space-y-8">
+					className="space-y-8 font-bodonimoda">
 					{/* name */}
 					<FormField
 						control={contactForm.control}

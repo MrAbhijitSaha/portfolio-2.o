@@ -36,13 +36,14 @@
 }
 
 @theme {
-  --font-michroma: --font-michroma;
-  --font-dosis: --dosis;
-  --font-sourceserif: --sourceserif;
-  --font-robotoslab: --robotoslab;
-  --font-bodonimoda: --bodonimoda;
-  --font-roboto: --roboto;
-  --font-zeyada: --zeyada;
+  --font-michroma: var(--font-michroma);
+  --font-dosis: var(--font-dosis);
+  --font-sourceserif: var(--font-source-serif);
+  --font-robotoslab: var(--font-roboto-slab);
+  --font-bodonimoda: var(--font-bodoni-moda);
+  --font-roboto: var(--font-roboto);
+  --font-zeyada: var(--font-zeyada);
+  --font-ubuntu: var(--font-ubuntu);
 }
 
 @theme inline {
@@ -98,7 +99,14 @@
       background-position: calc(100% + var(--shiny-width)) 0;
     }
   }
-}
+
+  --animate-gradient: gradient 8s linear infinite
+;
+  @keyframes gradient {
+  to {
+    background-position: var(--bg-size, 300%) 0;
+    }
+  }}
 
 :root {
   --radius: 0.625rem;
