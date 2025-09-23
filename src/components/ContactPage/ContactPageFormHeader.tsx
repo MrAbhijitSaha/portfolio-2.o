@@ -1,14 +1,16 @@
+import { AnimatedShinyText } from "../ui/magicui/animated-shiny-text";
+
 const ContactPageFormHeader = () => {
 	return (
 		<section className="mx-auto max-w-4xl px-6 py-12">
-			<div className="">
-				<div className="mb-4 text-center text-3xl font-bold">
-					{"Let's Connect 🤝"}
-				</div>
-				<div className="mb-10 text-center text-gray-400">
+			<div className="space-y-6 text-center">
+				<div className="text-3xl font-bold">{"Let's Connect 🤝"}</div>
+				<AnimatedShinyText
+					className=""
+					shimmerWidth={500}>
 					{`		I'm open to freelance, full-time roles, or just chatting
 					about cool tech. Drop a message!`}
-				</div>
+				</AnimatedShinyText>
 			</div>
 		</section>
 	);
