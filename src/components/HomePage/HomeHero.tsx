@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FaFile } from "react-icons/fa";
 import { TypewriterEffect } from "../ui/aceternityui/typewriter-effect";
-import { AnimatedShinyText } from "../ui/magicui/animated-shiny-text";
+import { AnimatedGradientText } from "../ui/animated-gradient-text";
 import { InteractiveHoverButton } from "../ui/magicui/interactive-hover-button";
 
 const HomeHero = () => {
@@ -23,11 +23,9 @@ const HomeHero = () => {
 			/>
 
 			<div className="text-foreground/40">
-				<AnimatedShinyText
-					shimmerWidth={500}
-					className="inline-flex items-center justify-center py-1 transition ease-out hover:text-neutral-600 hover:duration-300 md:text-xl hover:dark:text-neutral-400">
+				<AnimatedGradientText className="inline-flex items-center justify-center py-1 transition ease-out hover:text-neutral-600 hover:duration-300 md:text-xl hover:dark:text-neutral-400">
 					A Full Stack Developer
-				</AnimatedShinyText>
+				</AnimatedGradientText>
 			</div>
 			<Link
 				href={
