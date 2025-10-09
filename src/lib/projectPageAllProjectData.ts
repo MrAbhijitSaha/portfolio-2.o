@@ -189,5 +189,4 @@ export const projectPageAllProjectData = [
 
 `,
 	},
-	
 ];
