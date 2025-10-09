@@ -166,7 +166,7 @@ export const projectPageAllProjectData = [
 	{
 		id: "05",
 		image: "fakeloginform",
-		alt: "Login",
+		alt: "Loginform",
 		name: "Fake Login Form",
 		gitlink: "",
 		hostlink: "https://fake-loginform.netlify.app",

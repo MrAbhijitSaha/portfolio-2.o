@@ -2,7 +2,7 @@ export const HomePageProjectsSectionmapData = [
 	{
 		id: "01",
 		image: "portfolioproject",
-		alt: "Project 1",
+		alt: "personalportfolio",
 		name: "Personal Portfolio",
 		skill: [
 			{
@@ -32,7 +32,7 @@ export const HomePageProjectsSectionmapData = [
 	{
 		id: "02",
 		image: "gameproject",
-		alt: "Project 2",
+		alt: "gameproject",
 		name: "Gaming Website Clone",
 		skill: [
 			{
@@ -51,5 +51,4 @@ export const HomePageProjectsSectionmapData = [
 
 		description: `A responsive clone of a gaming-themed website that showcases game titles, news updates, and community events. The website features an engaging dark-themed design, interactive UI elements, and a visually immersive layout to capture the gaming aesthetic. The navigation is smooth, ensuring easy access to different game categories and content sections.`,
 	},
-	
 ];
