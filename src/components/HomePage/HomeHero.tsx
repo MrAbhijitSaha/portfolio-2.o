@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FaFile } from "react-icons/fa";
 import { TypewriterEffect } from "../ui/aceternityui/typewriter-effect";
-import { AnimatedGradientText } from "../ui/animated-gradient-text";
+import { AnimatedGradientText } from "../ui/magicui/animated-gradient-text";
 import { InteractiveHoverButton } from "../ui/magicui/interactive-hover-button";
 
 const HomeHero = () => {

@@ -51,26 +51,5 @@ export const HomePageProjectsSectionmapData = [
 
 		description: `A responsive clone of a gaming-themed website that showcases game titles, news updates, and community events. The website features an engaging dark-themed design, interactive UI elements, and a visually immersive layout to capture the gaming aesthetic. The navigation is smooth, ensuring easy access to different game categories and content sections.`,
 	},
-	{
-		id: "03",
-		image: "loancalculatorproject",
-		alt: "Project 3",
-		name: "Loan Calculator",
-		skill: [
-			{
-				id: "01",
-				one: "Html",
-			},
-			{
-				id: "02",
-				one: "css",
-			},
-			{
-				id: "03",
-				one: "javascript",
-			},
-		],
-
-		description: `A sleek, user-friendly loan calculator web app designed to help users easily estimate monthly payments, total interest, and total repayment amount for different loan scenarios. Built with modern web technologies, this calculator allows users to input loan amount, interest rate, and loan term, and instantly see clear, precise results in a clean, intuitive interface.`,
-	},
+	
 ];
