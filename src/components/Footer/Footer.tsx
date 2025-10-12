@@ -1,4 +1,6 @@
+import { footerSocialLinksData } from "@/lib/footersociallinksdatas";
 import Link from "next/link";
+import { Fragment } from "react";
 
 const Footer = () => {
 	return (
@@ -8,26 +10,20 @@ const Footer = () => {
 				<span className="font-zeyada">Abhijit Saha.</span>
 			</span>
 			<div>
-				<Link
-					href={"https://github.com/abhijit-542"}
-					className="duration-200 hover:text-gray-400">
-					GitHub
-				</Link>
-				&nbsp;|&nbsp;
-				<Link
-					href={"https://www.linkedin.com/in/abhijit542/"}
-					className="duration-200 hover:text-gray-400">
-					LinkedIn
-				</Link>
-				&nbsp;|&nbsp;
-				<Link
-					href={
-						"https://.google.com/mail/u/0/#inbox?compose=CllgCJNvMZDBzcZQfZZlCDpxKpGWhpCNvgSjflNcdtbrSXZFCsJZkpWwPMrhRnCDHHnrxczlMXV"
-					}
-					target="_blank"
-					className="duration-200 hover:text-gray-400">
-					Email Me
-				</Link>
+				{footerSocialLinksData.map((item, index) => (
+					<Fragment key={item.id}>
+						<Link
+							target="_blank"
+							key={item.id}
+							href={item.link}
+							className="duration-200 hover:text-gray-400">
+							{item.name}
+						</Link>
+						{index !== footerSocialLinksData.length - 1 && (
+							<span>&nbsp;|&nbsp;</span>
+						)}
+					</Fragment>
+				))}
 			</div>
 		</section>
 	);

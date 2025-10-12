@@ -31,3 +31,9 @@ export type MySkillesStackSkillsCapsulePropsType = {
 	title: string;
 	skills: MySkillesStackSkillsCapsuleDataType[];
 };
+
+export type FooterSocialLinksDataType = {
+	id: string;
+	name: string;
+	link: string;
+};
