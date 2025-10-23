@@ -7,7 +7,11 @@ const Footer = () => {
 		<section className="flex flex-col items-center gap-2 py-8 text-center text-sm md:text-base">
 			<span>
 				Designed & built with ❤️ by &nbsp;
-				<span className="font-zeyada">Abhijit Saha.</span>
+				<Link
+					href={"/about"}
+					className="font-zeyada">
+					Abhijit Saha.
+				</Link>
 			</span>
 			<div>
 				{footerSocialLinksData.map((item, index) => (

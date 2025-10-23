@@ -4,7 +4,7 @@ export const projectPageAllProjectData = [
 		image: "comingsoon",
 		alt: "Coming soon",
 		name: "More Projects Coming Soon",
-		gitlink: "",
+		gitlink: "https://github.com/MrAbhijitSaha?tab=repositories",
 		hostlink: "https://upcomingprojects.netlify.app/",
 		skills: [
 			{
@@ -29,26 +29,18 @@ export const projectPageAllProjectData = [
 			},
 			{
 				id: "06",
-				skill: "react",
-			},
-			{
-				id: "07",
-				skill: "react",
-			},
-			{
-				id: "08",
 				skill: "next.js",
 			},
 			{
-				id: "09",
+				id: "07",
 				skill: "tailwind css",
 			},
 			{
-				id: "10",
+				id: "08",
 				skill: "shadcn/ui",
 			},
 			{
-				id: "11",
+				id: "09",
 				skill: "magic/ui",
 			},
 		],
@@ -60,7 +52,7 @@ export const projectPageAllProjectData = [
 		image: "portfolioproject",
 		alt: "Portfolio",
 		name: "Personal Portfolio",
-		gitlink: "",
+		gitlink: "https://github.com/MrAbhijitSaha/portfolio-2.o",
 		hostlink: "https://abhijitsaha.vercel.app/",
 		skills: [
 			{
@@ -96,7 +88,7 @@ export const projectPageAllProjectData = [
 		image: "gameproject",
 		alt: "gaming",
 		name: "Gaming Website Clskill",
-		gitlink: "",
+		gitlink: "https://github.com/MrAbhijitSaha/gaming-website-clone",
 		hostlink: "https://gameboiz.netlify.app",
 		skills: [
 			{
@@ -120,7 +112,7 @@ export const projectPageAllProjectData = [
 		image: "resturent",
 		alt: "Resturent",
 		name: "Resturent website Clskill",
-		gitlink: "",
+		gitlink: "https://github.com/MrAbhijitSaha/resturent-website-clone",
 		hostlink: "https://resturent-bar.netlify.app",
 		skills: [
 			{
@@ -144,7 +136,7 @@ export const projectPageAllProjectData = [
 		image: "aquream",
 		alt: "Aqurium",
 		name: "Aquarium Website Clskill",
-		gitlink: "",
+		gitlink: "https://github.com/MrAbhijitSaha/aquarium-website-clone",
 		hostlink: "https://fish-aquarium.netlify.app",
 		skills: [
 			{
@@ -168,7 +160,7 @@ export const projectPageAllProjectData = [
 		image: "fakeloginform",
 		alt: "Loginform",
 		name: "Fake Login Form",
-		gitlink: "",
+		gitlink: "https://github.com/MrAbhijitSaha/fake-login-form",
 		hostlink: "https://fake-loginform.netlify.app",
 		skills: [
 			{
