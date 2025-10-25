@@ -87,7 +87,7 @@ export const projectPageAllProjectData = [
 		id: "02",
 		image: "gameproject",
 		alt: "gaming",
-		name: "Gaming Website Clskill",
+		name: "Gaming Website Clone",
 		gitlink: "https://github.com/MrAbhijitSaha/gaming-website-clone",
 		hostlink: "https://gameboiz.netlify.app",
 		skills: [
@@ -111,7 +111,7 @@ export const projectPageAllProjectData = [
 		id: "03",
 		image: "resturent",
 		alt: "Resturent",
-		name: "Resturent website Clskill",
+		name: "Resturent website Clone",
 		gitlink: "https://github.com/MrAbhijitSaha/resturent-website-clone",
 		hostlink: "https://resturent-bar.netlify.app",
 		skills: [
@@ -135,7 +135,7 @@ export const projectPageAllProjectData = [
 		id: "04",
 		image: "aquream",
 		alt: "Aqurium",
-		name: "Aquarium Website Clskill",
+		name: "Aquarium Website Clone",
 		gitlink: "https://github.com/MrAbhijitSaha/aquarium-website-clone",
 		hostlink: "https://fish-aquarium.netlify.app",
 		skills: [
