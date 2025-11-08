@@ -35,6 +35,8 @@
   cursor: var(--cursor-custom) !important;
 }
 
+/* custom fonts */
+
 @theme {
   --font-michroma: var(--font-michroma);
   --font-dosis: var(--font-dosis);
