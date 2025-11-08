@@ -76,7 +76,7 @@ export default function NotFoundPageContent({
 			ref={containerRef}
 			onMouseMove={handleMouseMove}
 			onMouseLeave={handleMouseLeave}
-			className={`relative flex h-[24rem] w-full items-center justify-center overflow-hidden bg-white md:h-screen dark:bg-black ${className}`}
+			className={`relative flex h-96 w-full items-center justify-center overflow-hidden bg-white md:h-screen dark:bg-black ${className}`}
 			style={{ perspective: "1000px" }}>
 			<Particles
 				color={isDark ? "#ffffff" : "#000000"}

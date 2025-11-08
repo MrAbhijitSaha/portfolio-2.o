@@ -19,7 +19,7 @@ const HomeHero = () => {
 			<div className="text-blue-700 md:text-xl">{"Hey there!, I'm"}</div>
 			<TypewriterEffect
 				words={typeWritterEffectWords}
-				className="font-bodonimoda text-start !text-3xl md:!text-7xl lg:!text-9xl"
+				className="font-bodonimoda text-start text-3xl! md:text-7xl! lg:text-9xl!"
 			/>
 
 			<div className="text-foreground/40">
