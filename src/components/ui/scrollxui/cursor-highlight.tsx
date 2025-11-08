@@ -171,7 +171,7 @@ export function CursorHighlight({
   };
 
   const pointerAnimation = getPointerAnimation();
-  const gradientClass = `bg-gradient-to-r ${gradient}`;
+  const gradientClass = `bg-linear-to-r ${gradient}`;
 
   return (
     <div ref={containerRef} className={cn("relative inline-block", containerClassName)}>

@@ -168,7 +168,7 @@ export function Lamphome({
 		<div
 			className={`flex min-h-full w-full flex-col items-center justify-start pt-2 text-gray-900 transition-all duration-500 dark:text-white [@media(min-width:1024px)]:pt-8 [@media(min-width:480px)]:pt-4 [@media(min-width:768px)]:pt-6 ${className}`}>
 			{/* Fixed navbar container with highest z-index */}
-			<div className="relative z-[9999] w-full max-w-4xl">
+			<div className="relative z-9999 w-full max-w-4xl">
 				<motion.div
 					ref={navBarRef}
 					initial={{ width: "95%" }}
@@ -176,7 +176,7 @@ export function Lamphome({
 					transition={{ duration: 0.8, ease: "easeOut" }}
 					className="relative mx-auto flex h-auto w-[95%] items-center justify-between rounded-2xl border border-gray-200 bg-white/80 px-3 py-3 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl dark:border-gray-700 dark:bg-neutral-950 [@media(min-width:768px)]:px-6">
 					{logoSrc && (
-						<div className="flex-shrink-0">
+						<div className="shrink-0">
 							<Link href={"/"}>
 								<Image
 									src={logoSrc}
@@ -204,7 +204,7 @@ export function Lamphome({
 									}`}>
 									{item.label}
 									<span
-										className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 ${"w-0 group-hover:w-full"}`}></span>
+										className={`absolute -bottom-1 left-0 h-0.5 bg-linear-to-r from-blue-500 to-purple-500 transition-all duration-300 ${"w-0 group-hover:w-full"}`}></span>
 								</Link>
 							);
 						})}
@@ -237,7 +237,7 @@ export function Lamphome({
 					{/* Enhanced Chain Toggle with Animation Support */}
 					<div className="group absolute top-full right-3 z-10 mt-2 flex flex-col items-center">
 						<motion.div
-							className="relative w-1 rounded-full bg-gradient-to-b from-gray-400 to-gray-600 shadow-sm dark:from-gray-500 dark:to-gray-300"
+							className="relative w-1 rounded-full bg-linear-to-b from-gray-400 to-gray-600 shadow-sm dark:from-gray-500 dark:to-gray-300"
 							animate={{
 								height: chainLength + dragY,
 								scaleY: 1,
@@ -292,7 +292,7 @@ export function Lamphome({
 								scale: 1.12,
 								boxShadow: `0 ${6 + dragY * 0.3}px ${14 + dragY * 0.3}px rgba(0,0,0,0.3)`,
 							}}
-							className="relative h-6 w-6 cursor-grab overflow-hidden rounded-full border-2 border-yellow-500 bg-gradient-to-br from-yellow-400 to-yellow-600 shadow-lg transition-shadow duration-200 active:cursor-grabbing dark:border-yellow-400 dark:from-yellow-300 dark:to-yellow-500"
+							className="relative h-6 w-6 cursor-grab overflow-hidden rounded-full border-2 border-yellow-500 bg-linear-to-br from-yellow-400 to-yellow-600 shadow-lg transition-shadow duration-200 active:cursor-grabbing dark:border-yellow-400 dark:from-yellow-300 dark:to-yellow-500"
 							animate={{
 								rotateZ: chainPulled ? 180 : 0,
 							}}
@@ -301,7 +301,7 @@ export function Lamphome({
 								ease: "easeInOut",
 							}}
 							style={{ position: "relative", top: -20, y: 0 }}>
-							<div className="h-full w-full rounded-full bg-gradient-to-br from-yellow-300 to-transparent opacity-60"></div>
+							<div className="h-full w-full rounded-full bg-linear-to-br from-yellow-300 to-transparent opacity-60"></div>
 							<div className="absolute inset-0 flex items-center justify-center">
 								<div className="flex flex-col space-y-0.5">
 									<TbMoonFilled />
@@ -371,7 +371,7 @@ export function Lamphome({
 								animate={{ opacity: 1, y: 0 }}
 								exit={{ opacity: 0, y: -10 }}
 								transition={{ duration: 0.2 }}
-								className="absolute top-full right-0 left-0 z-[9999] mt-2 rounded-xl border border-gray-200 bg-white shadow-xl backdrop-blur-sm dark:border-gray-700 dark:bg-neutral-950 [@media(min-width:640px)]:hidden"
+								className="absolute top-full right-0 left-0 z-9999 mt-2 rounded-xl border border-gray-200 bg-white shadow-xl backdrop-blur-sm dark:border-gray-700 dark:bg-neutral-950 [@media(min-width:640px)]:hidden"
 								style={{
 									// Ensure it's truly above everything
 									position: "absolute",
@@ -411,7 +411,7 @@ export function Lamphome({
 						opacity: showGlow ? 1 : 0,
 					}}
 					transition={{ duration: 0.8, delay: 0.2 }}
-					className="relative -z-10 mt-6 h-0.5 max-w-3xl bg-gradient-to-r from-transparent via-red-400 to-transparent">
+					className="relative -z-10 mt-6 h-0.5 max-w-3xl bg-linear-to-r from-transparent via-red-400 to-transparent">
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: showGlow ? 1 : 0 }}
@@ -423,7 +423,7 @@ export function Lamphome({
 			{title && (
 				<motion.h1
 					ref={titleRef}
-					className="mt-6 max-w-4xl bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text px-4 text-center text-xl font-bold text-transparent dark:from-white dark:via-gray-200 dark:to-white [@media(min-width:1024px)]:text-5xl [@media(min-width:1280px)]:text-6xl [@media(min-width:480px)]:mt-8 [@media(min-width:480px)]:text-2xl [@media(min-width:640px)]:text-3xl [@media(min-width:768px)]:text-4xl"
+					className="mt-6 max-w-4xl bg-linear-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text px-4 text-center text-xl font-bold text-transparent dark:from-white dark:via-gray-200 dark:to-white [@media(min-width:1024px)]:text-5xl [@media(min-width:1280px)]:text-6xl [@media(min-width:480px)]:mt-8 [@media(min-width:480px)]:text-2xl [@media(min-width:640px)]:text-3xl [@media(min-width:768px)]:text-4xl"
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.8, delay: 0.4 }}>
@@ -438,7 +438,7 @@ export function Lamphome({
 						opacity: !showGlow ? 1 : 0,
 					}}
 					transition={{ duration: 0.8, delay: 0.2 }}
-					className="relative mt-6 h-0.5 max-w-3xl bg-gradient-to-r from-transparent via-red-400 to-transparent">
+					className="relative mt-6 h-0.5 max-w-3xl bg-linear-to-r from-transparent via-red-400 to-transparent">
 					<motion.div
 						initial={{ opacity: 0 }}
 						animate={{ opacity: !showGlow ? 1 : 0 }}
