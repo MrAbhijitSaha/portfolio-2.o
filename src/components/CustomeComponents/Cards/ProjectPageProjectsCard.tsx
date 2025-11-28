@@ -1,12 +1,10 @@
-import { ProjectPageProjectsCardPropsType } from "@/lib/alltypes";
+import { ProjectCardPropsType } from "@/lib/alltypes";
 import Image from "next/image";
 import Link from "next/link";
 import { FiExternalLink } from "react-icons/fi";
 import { SiGithub } from "react-icons/si";
 
-const ProjectPageProjectsCard = ({
-	data,
-}: ProjectPageProjectsCardPropsType) => {
+const ProjectPageProjectsCard = ({ data }: ProjectCardPropsType) => {
 	return (
 		<div className="border-border rounded-lg border transition-all hover:shadow-md">
 			<div className="relative -z-10 aspect-video w-full overflow-hidden">
@@ -20,13 +18,13 @@ const ProjectPageProjectsCard = ({
 			<div className="relative space-y-3 p-4">
 				<div className="absolute end-0 top-0 flex gap-3 px-4 pt-4">
 					<Link
-						href={data.gitlink}
+						href={data.gitlink!}
 						target="_blank">
 						<SiGithub />
 					</Link>
 
 					<Link
-						href={data.hostlink}
+						href={data.hostlink!}
 						target="_blank">
 						<FiExternalLink />
 					</Link>

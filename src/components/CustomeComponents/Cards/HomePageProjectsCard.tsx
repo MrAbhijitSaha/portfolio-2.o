@@ -1,45 +1,42 @@
-import { HomePageProjectsSectionmapData } from "@/lib/homepageprojectsSectionmapData";
+import { ProjectCardPropsType } from "@/lib/alltypes";
 import Image from "next/image";
 
-const HomePageProjectsCard = () => {
+const HomePageProjectsCard = ({ data }: ProjectCardPropsType) => {
 	return (
-		<section className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-			{HomePageProjectsSectionmapData.map((item) => {
-				return (
-					<div
-						className="border-border rounded-lg border transition-all hover:shadow-md"
-						key={item.id}>
-						<div className="relative aspect-video w-full overflow-hidden">
-							<Image
-								src={`/projects/${item.image}.png`}
-								alt={item.alt}
-								fill
-								className="rounded-t-lg border-b object-cover"
-							/>
-						</div>
-						<div className="space-y-3 p-4">
-							<div className="text-lg font-semibold">
-								{item.name}
-							</div>
+		<>
+		
+			<div
+				className="border-border rounded-lg border transition-all hover:shadow-md relative"
+				key={data.id}>
+				<div className="relative aspect-video w-full overflow-hidden">
+					<Image
+						src={`/projects/${data.image}.png`}
+						alt={data.alt}
+						fill
+						className="rounded-t-lg border-b object-cover"
+					/>
+				</div>
+				<div className="space-y-3 p-4">
+					<div className="text-lg font-semibold">{data.name}</div>
 
-							<div className="flex flex-wrap gap-2">
-								{item.skill.map((i) => (
-									<span
-										className="text-primary rounded-full bg-blue-700/20 px-3 py-1 text-sm uppercase"
-										key={i.id}>
-										{i.one}
-									</span>
-								))}
-							</div>
-
-							<div className="text-muted-foreground text-sm">
-								{item.description}
-							</div>
-						</div>
+					<div className="flex flex-wrap gap-2">
+						{data.skills.map((i) => (
+							<span
+								className="text-primary rounded-full bg-blue-700/20 px-3 py-1 text-sm uppercase"
+								key={i.id}>
+								{i.skill}
+							</span>
+						))}
 					</div>
-				);
-			})}
-		</section>
+
+					<div className="text-muted-foreground text-sm absolute bottom-0">
+						{data.description}
+					</div>
+				</div>
+			</div>
+			
+		
+		</>
 	);
 };
 export default HomePageProjectsCard;
