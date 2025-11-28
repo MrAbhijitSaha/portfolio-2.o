@@ -10,13 +10,13 @@ export type ProjectCardDataType = {
 	image: string;
 	alt: string;
 	name: string;
-	gitlink: string;
-	hostlink: string;
+	gitlink ?: string;
+	hostlink ?: string;
 	skills: SkillType[];
 	description: string;
 };
 
-export type ProjectPageProjectsCardPropsType = {
+export type ProjectCardPropsType = {
 	data: ProjectCardDataType;
 };
 
@@ -37,3 +37,18 @@ export type FooterSocialLinksDataType = {
 	name: string;
 	link: string;
 };
+
+interface Web3FormsSuccess {
+	success: true;
+	message: string;
+}
+
+interface Web3FormsFailure {
+	success: false;
+	message: string;
+	errors?: {
+		[key: string]: string | string[];
+	};
+}
+
+export type Web3FormsResponse = Web3FormsSuccess | Web3FormsFailure;

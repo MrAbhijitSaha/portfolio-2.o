@@ -1,11 +1,13 @@
 "use client";
 
+import { Web3FormsResponse } from "@/lib/alltypes";
 import { triggerConfetti } from "@/lib/confettiAnimationonFormSubmit";
 import { contactSchema, ContactSchemaType } from "@/lib/schema";
 import { showErrorToast, showSuccessToast } from "@/lib/toast";
 import { zodResolver } from "@hookform/resolvers/zod";
+import ky from "ky";
 import { useForm } from "react-hook-form";
-
+import { Button } from "../ui/shadcnui/button";
 import {
 	Form,
 	FormControl,
@@ -14,7 +16,6 @@ import {
 	FormMessage,
 } from "../ui/shadcnui/form";
 import { Input } from "../ui/shadcnui/input";
-import { Button } from "../ui/shadcnui/button";
 
 const ContactForm = () => {
 	const contactForm = useForm<ContactSchemaType>({
@@ -29,32 +30,25 @@ const ContactForm = () => {
 
 	async function handleSubmit(value: ContactSchemaType) {
 		try {
-			const response = await fetch("https://api.web3forms.com/submit", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-					Accept: "application/json",
-				},
-				body: JSON.stringify({
-					access_key: "b333bf5b-8758-4aff-a972-89bc09943e0b",
-					name: value.name,
-					email: value.email,
-					message: value.message,
-				}),
-			});
+			const result = await ky
+				.post("https://api.web3forms.com/submit", {
+					headers: {
+						Accept: "application/json",
+					},
+					json: {
+						access_key: "b333bf5b-8758-4aff-a972-89bc09943e0b",
+						name: value.name,
+						email: value.email,
+						message: value.message,
+					},
+				})
+				.json<Web3FormsResponse>();
 
-			const result = await response.json();
 			if (result.success) {
-				console.log(result);
-				return new Promise<void>((resolve) => {
-					setTimeout(() => {
-						resolve();
-						console.log(value);
-						contactForm.reset();
-						showSuccessToast();
-						triggerConfetti();
-					}, 1000);
-				});
+				console.log(value);
+				contactForm.reset();
+				showSuccessToast();
+				triggerConfetti();
 			} else {
 				showErrorToast("Oops! Something went wrong. Please try again.");
 			}
@@ -69,7 +63,7 @@ const ContactForm = () => {
 			<Form {...contactForm}>
 				<form
 					onSubmit={contactForm.handleSubmit(handleSubmit)}
-					className="space-y-8 font-bodonimoda">
+					className="font-bodonimoda space-y-8">
 					{/* name */}
 					<FormField
 						control={contactForm.control}

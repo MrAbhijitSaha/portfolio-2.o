@@ -2,50 +2,74 @@ export const HomePageProjectsSectionmapData = [
 	{
 		id: "01",
 		image: "portfolioproject",
-		alt: "personalportfolio",
+		alt: "Portfolio",
 		name: "Personal Portfolio",
-		skill: [
+		// gitlink: "https://github.com/MrAbhijitSaha/portfolio-2.o",
+		// hostlink: "https://abhijitsaha.vercel.app/",
+		skills: [
 			{
 				id: "01",
-				one: "react",
+				skill: "react",
 			},
 			{
 				id: "02",
-				one: "next.js",
+				skill: "Next.js 16 (App Router)",
 			},
 			{
 				id: "03",
-				one: "tailwind css",
+				skill: "typescript",
 			},
 			{
 				id: "04",
-				one: "shadcn/ui",
+				skill: "Tailwind CSS v4",
 			},
 			{
 				id: "05",
-				one: "magic/ui",
+				skill: "shadcn/ui",
+			},
+			{
+				id: "06",
+				skill: "React Hook Form",
+			},
+			{
+				id: "07",
+				skill: "Zod Validation",
+			},
+
+			{
+				id: "08",
+				skill: "Ky (HTTP Client)",
+			},
+
+			{
+				id: "09",
+				skill: "Next-Themes (Dark Mode)",
+			},
+			{
+				id: "10",
+				skill: "react toastify",
 			},
 		],
 
-		description: `A modern, fully responsive personal portfolio website designed and developed to showcase my skills, projects, and experience as a frontend developer. Built using React, Next.js, Tailwind CSS, and ShadCN UI, this portfolio highlights my ability to create clean, elegant, and user-friendly interfaces. The design focuses on minimalism and smooth interactions, ensuring a great browsing experience on any device`,
+		description: `A high-performance, fully responsive personal portfolio engineered with Next.js 16 and TypeScript. Leveraging the power of Tailwind CSS and Shadcn/UI, it delivers a minimalist yet sophisticated aesthetic with a comprehensive dark/light mode system. The application features fluid animations powered by Framer Motion and optimized layouts to ensure a seamless user experience across all devices. It serves as a central hub demonstrating my expertise in building scalable, modern web applications.`,
 	},
 	{
 		id: "02",
 		image: "gameproject",
 		alt: "gameproject",
 		name: "Gaming Website Clone",
-		skill: [
+		skills: [
 			{
 				id: "01",
-				one: "Html",
+				skill: "Html",
 			},
 			{
 				id: "02",
-				one: "css",
+				skill: "css",
 			},
 			{
 				id: "03",
-				one: "javascript",
+				skill: "javascript",
 			},
 		],
 

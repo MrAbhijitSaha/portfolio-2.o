@@ -8,7 +8,7 @@ const ContactPageFormHeader = () => {
 				<AnimatedShinyText
 					className=""
 					shimmerWidth={500}>
-					{`		I'm open to freelance, full-time roles, or just chatting
+					{`I'm open to freelance, full-time roles, or just chatting
 					about cool tech. Drop a message!`}
 				</AnimatedShinyText>
 			</div>
