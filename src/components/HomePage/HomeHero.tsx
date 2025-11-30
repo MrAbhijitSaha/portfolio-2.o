@@ -29,7 +29,7 @@ const HomeHero = () => {
 			</div>
 			<Link
 				href={
-					"https://drive.google.com/file/d/1ZSd3RVf1GgB9TsaTpHg8bjSNlXZoewN7/view?usp=sharing"
+					"https://drive.google.com/file/d/1g8-JnC3-eMQc4dN06q98Px64qfmuNoTq/view?usp=sharing"
 				}
 				target="_blank">
 				<InteractiveHoverButton
