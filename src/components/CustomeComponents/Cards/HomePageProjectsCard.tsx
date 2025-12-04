@@ -29,7 +29,7 @@ const HomePageProjectsCard = ({ data }: ProjectCardPropsType) => {
 						))}
 					</div>
 
-					<div className="text-muted-foreground text-sm absolute bottom-0">
+					<div className="text-muted-foreground text-sm ">
 						{data.description}
 					</div>
 				</div>
