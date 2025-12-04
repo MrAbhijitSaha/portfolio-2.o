@@ -1,15 +1,12 @@
-import { FaFile } from "react-icons/fa";
-import LinkBtn from "../CustomeComponents/LinkBtn";
-
 const HomeHeroAllLinks = () => {
 	return (
 		<section className="flex flex-wrap gap-5">
-			<LinkBtn
+			{/* <LinkBtn
 				href="/"
 				icon={<FaFile />}
 				className="">
 				Resume
-			</LinkBtn>
+			</LinkBtn> */}
 			{/* <LinkBtn
 				href="/"
 				icon={<FaGithub />}
@@ -28,7 +25,6 @@ const HomeHeroAllLinks = () => {
 				className="">
 				Github
 			</LinkBtn> */}
-		
 		</section>
 	);
 };
