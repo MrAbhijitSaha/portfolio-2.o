@@ -4,6 +4,8 @@ export const HomePageProjectsSectionmapData = [
 		image: "recipefinder",
 		alt: "recipefinder",
 		name: "Recipe Finder App",
+		gitlink: "https://github.com/MrAbhijitSaha/recipe-finder-app",
+		hostlink: "https://findrecipeapp.vercel.app/",
 		skills: [
 			{
 				id: "01",
@@ -52,6 +54,8 @@ export const HomePageProjectsSectionmapData = [
 		image: "gameproject",
 		alt: "gameproject",
 		name: "Gaming Website Clone",
+		gitlink: "https://github.com/MrAbhijitSaha/portfolio-2.o",
+		hostlink: "https://abhijitsaha.vercel.app/",
 		skills: [
 			{
 				id: "01",
