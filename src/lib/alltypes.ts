@@ -10,8 +10,8 @@ export type ProjectCardDataType = {
 	image: string;
 	alt: string;
 	name: string;
-	gitlink ?: string;
-	hostlink ?: string;
+	gitlink: string;
+	hostlink: string;
 	skills: SkillType[];
 	description: string;
 };

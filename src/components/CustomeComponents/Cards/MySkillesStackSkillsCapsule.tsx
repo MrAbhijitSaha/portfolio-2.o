@@ -11,19 +11,19 @@ const MySkillesStackSkillsCapsule = () => {
 		<>
 			<MySkillesStackSkillsMap
 				skills={Languages}
-				title="Languages 🌐 "
+				title="Languages"
 			/>
 			<MySkillesStackSkillsMap
 				skills={FrameworksAndLibraries}
-				title="Frameworks & Libraries 🧩"
+				title="Frameworks & Libraries"
 			/>
 			<MySkillesStackSkillsMap
 				skills={Styling}
-				title="Styling 🎨"
+				title="Styling"
 			/>
 			<MySkillesStackSkillsMap
 				skills={ToolsAndPlatforms}
-				title="Tools & Platforms 🛠️"
+				title="Tools & Platforms"
 			/>
 		</>
 	);

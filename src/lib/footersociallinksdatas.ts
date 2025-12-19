@@ -12,6 +12,6 @@ export const footerSocialLinksData = [
 	{
 		id: "03",
 		name: "Email",
-		link: "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNvMZDBzcZQfZZlCDpxKpGWhpCNvgSjflNcdtbrSXZFCsJZkpWwPMrhRnCDHHnrxczlMXV",
+		link: "mailto:work.abhijitsaha@gmail.com",
 	},
 ];

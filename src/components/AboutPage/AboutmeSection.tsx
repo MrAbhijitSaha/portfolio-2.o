@@ -27,7 +27,7 @@ const AboutmeSection = () => {
 				duration={1}>
 				<>
 					<div className="pb-4 text-xl text-blue-700">
-						Why I love coding 💬
+						Why I love coding
 					</div>
 					<div className="">
 						I fell in love with{" "}
@@ -49,7 +49,7 @@ const AboutmeSection = () => {
 				duration={1}>
 				<>
 					<div className="pb-4 text-xl text-blue-700">
-						My motivation & goals 🎯
+						My motivation & goals
 					</div>
 					<div className="">
 						My dream is to work at a big company one day, earn{" "}
@@ -69,7 +69,7 @@ const AboutmeSection = () => {
 				duration={1}>
 				<>
 					<div className="pb-4 text-xl text-blue-700">
-						Outside of work 🌱
+						Outside of work
 					</div>
 					<div className="">
 						When I&#39;m not coding,{" "}
@@ -88,7 +88,7 @@ const AboutmeSection = () => {
 				duration={1}>
 				<>
 					<div className="pb-4 text-xl text-blue-700">
-						My values in work 💡
+						My values in work
 					</div>
 					<div className="">
 						User experience is everything.{" "}
@@ -106,7 +106,7 @@ const AboutmeSection = () => {
 				duration={1}>
 				<>
 					<div className="pb-4 text-xl text-blue-700">
-						Closing line 🚀
+						Closing line
 					</div>
 					<div className="">
 						I&#39;m always eager to{" "}
