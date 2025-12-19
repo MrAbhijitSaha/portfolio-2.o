@@ -18,14 +18,16 @@ const ProjectPageProjectsCard = ({ data }: ProjectCardPropsType) => {
 			<div className="relative space-y-3 p-4">
 				<div className="absolute end-0 top-0 flex gap-3 px-4 pt-4">
 					<Link
-						href={data.gitlink!}
-						target="_blank">
+						href={data.gitlink}
+						target="_blank"
+						rel="noopener noreferrer">
 						<SiGithub />
 					</Link>
 
 					<Link
-						href={data.hostlink!}
-						target="_blank">
+						href={data.hostlink}
+						target="_blank"
+						rel="noopener noreferrer">
 						<FiExternalLink />
 					</Link>
 				</div>

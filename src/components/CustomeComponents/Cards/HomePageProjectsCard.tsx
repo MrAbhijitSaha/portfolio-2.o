@@ -23,14 +23,16 @@ const HomePageProjectsCard = ({ data }: ProjectCardPropsType) => {
 						<div className="text-lg font-semibold">{data.name}</div>
 						<div className="flex gap-2">
 							<Link
-								href={data.gitlink!}
-								target="_blank">
+								href={data.gitlink}
+								target="_blank"
+								rel="noopener noreferrer">
 								<SiGithub />
 							</Link>
 
 							<Link
-								href={data.hostlink!}
-								target="_blank">
+								href={data.hostlink}
+								target="_blank"
+								rel="noopener noreferrer">
 								<FiExternalLink />
 							</Link>
 						</div>
