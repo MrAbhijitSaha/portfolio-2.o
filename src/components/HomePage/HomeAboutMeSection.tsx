@@ -7,7 +7,7 @@ const HomeAboutMeSection = () => {
 	return (
 		<section className="py-5">
 			<div className="pb-2.5 text-xl md:text-2xl lg:text-4xl">
-				Who I Am 👀
+				Who I Am
 			</div>
 
 			<div className="flex flex-col-reverse items-center justify-center gap-5 lg:flex-row">
@@ -111,7 +111,7 @@ const HomeAboutMeSection = () => {
 						<CursorHighlight gradient="from-red-500  to-red-500">
 							Let’s build something amazing together!
 						</CursorHighlight>
-						🔥
+						
 					</Link>
 				</div>
 				<Image
