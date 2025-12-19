@@ -51,9 +51,9 @@ export const HomePageProjectsSectionmapData = [
 	},
 	{
 		id: "02",
-		image: "gameproject",
-		alt: "gameproject",
-		name: "Gaming Website Clone",
+		image: "portfolioproject",
+		alt: "Portfolio",
+		name: "Personal Portfolio",
 		gitlink: "https://github.com/MrAbhijitSaha/portfolio-2.o",
 		hostlink: "https://abhijitsaha.vercel.app/",
 		skills: [
@@ -71,6 +71,6 @@ export const HomePageProjectsSectionmapData = [
 			},
 		],
 
-		description: `A responsive clone of a gaming-themed website that showcases game titles, news updates, and community events. The website features an engaging dark-themed design, interactive UI elements, and a visually immersive layout to capture the gaming aesthetic. The navigation is smooth, ensuring easy access to different game categories and content sections.`,
+				description: `A high-performance, fully responsive personal portfolio engineered with Next.js 16 and TypeScript. Leveraging the power of Tailwind CSS and Shadcn/UI, it delivers a minimalist yet sophisticated aesthetic with a comprehensive dark/light mode system. The application features fluid animations powered by Framer Motion and optimized layouts to ensure a seamless user experience across all devices. It serves as a central hub demonstrating my expertise in building scalable, modern web applications.`,
 	},
 ];
