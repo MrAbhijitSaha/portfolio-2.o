@@ -59,18 +59,48 @@ export const HomePageProjectsSectionmapData = [
 		skills: [
 			{
 				id: "01",
-				skill: "Html",
+				skill: "react",
 			},
 			{
 				id: "02",
-				skill: "css",
+				skill: "Next.js 16 (App Router)",
 			},
 			{
 				id: "03",
-				skill: "javascript",
+				skill: "typescript",
+			},
+			{
+				id: "04",
+				skill: "Tailwind CSS v4",
+			},
+			{
+				id: "05",
+				skill: "shadcn/ui",
+			},
+			{
+				id: "06",
+				skill: "React Hook Form",
+			},
+			{
+				id: "07",
+				skill: "Zod Validation",
+			},
+
+			{
+				id: "08",
+				skill: "Ky (HTTP Client)",
+			},
+
+			{
+				id: "09",
+				skill: "Next-Themes (Dark Mode)",
+			},
+			{
+				id: "10",
+				skill: "react toastify",
 			},
 		],
 
-				description: `A high-performance, fully responsive personal portfolio engineered with Next.js 16 and TypeScript. Leveraging the power of Tailwind CSS and Shadcn/UI, it delivers a minimalist yet sophisticated aesthetic with a comprehensive dark/light mode system. The application features fluid animations powered by Framer Motion and optimized layouts to ensure a seamless user experience across all devices. It serves as a central hub demonstrating my expertise in building scalable, modern web applications.`,
+		description: `A high-performance, fully responsive personal portfolio engineered with Next.js 16 and TypeScript. Leveraging the power of Tailwind CSS and Shadcn/UI, it delivers a minimalist yet sophisticated aesthetic with a comprehensive dark/light mode system. The application features fluid animations powered by Framer Motion and optimized layouts to ensure a seamless user experience across all devices. It serves as a central hub demonstrating my expertise in building scalable, modern web applications.`,
 	},
 ];
