@@ -1,7 +1,7 @@
 "use client";
 
-import { Particles } from "@/components/ui/scrollxui/particles";
-import { Button } from "@/components/ui/shadcnui/button";
+import { Button } from "@/components/ui/button";
+import { Particles } from "@/components/ui/particles";
 import Image from "next/image";
 import Link from "next/link";
 import { MouseEvent, useEffect, useRef, useState } from "react";

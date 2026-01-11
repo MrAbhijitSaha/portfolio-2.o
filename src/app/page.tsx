@@ -1,6 +1,5 @@
 import HomeAboutMeSection from "@/components/HomePage/HomeAboutMeSection";
 import HomeHero from "@/components/HomePage/HomeHero";
-import HomeWhatIHaveBuildSection from "@/components/HomePage/HomeWhatIHaveBuildSection";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,7 +14,6 @@ const page = () => {
 		<>
 			<HomeHero />
 			<HomeAboutMeSection />
-			<HomeWhatIHaveBuildSection />
 		</>
 	);
 };

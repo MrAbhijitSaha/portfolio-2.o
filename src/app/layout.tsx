@@ -1,7 +1,7 @@
 import Footer from "@/components/Footer/Footer";
 import MainNavBar from "@/components/NavBar/MainNavBar";
-import { ThemeProvider } from "@/components/ui/shadcnui/ThemeProvider";
-import { allFontVariables } from "@/lib/fonts";
+import { Separator } from "@/components/ui/separator";
+import { ThemeProvider } from "@/components/ui/ThemeProvider";
 import { ReactNode } from "react";
 import "./globals.css";
 
@@ -9,10 +9,9 @@ type RootLayoutPropsType = Readonly<{
 	children: ReactNode;
 }>;
 
-export default function RootLayout({ children }: RootLayoutPropsType) {
+const RootLayout = ({ children }: RootLayoutPropsType) => {
 	return (
 		<html
-			className={allFontVariables}
 			lang="en"
 			suppressHydrationWarning>
 			<body className="cursor-custom selection:bg-red-400 selection:text-white">
@@ -24,9 +23,15 @@ export default function RootLayout({ children }: RootLayoutPropsType) {
 					<header>
 						<MainNavBar />
 					</header>
+
+					<Separator orientation="vertical" />
+
 					<main className="font-robotoslab container mx-auto px-8 md:px-32">
 						{children}
 					</main>
+
+					<Separator />
+
 					<footer className="container mx-auto px-6">
 						<Footer />
 					</footer>
@@ -34,4 +39,6 @@ export default function RootLayout({ children }: RootLayoutPropsType) {
 			</body>
 		</html>
 	);
-}
+};
+
+export default RootLayout;
