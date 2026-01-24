@@ -1,4 +1,4 @@
-import NotFoundPageContent from "@/components/ui/scrollxui/not-found";
+import NotFoundPageContent from "@/components/ui/not-found";
 
 const NotFound = () => {
 	return (

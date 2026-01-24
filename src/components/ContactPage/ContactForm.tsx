@@ -7,9 +7,9 @@ import { showErrorToast, showSuccessToast } from "@/lib/toast";
 import { zodResolver } from "@hookform/resolvers/zod";
 import ky from "ky";
 import { Controller, useForm } from "react-hook-form";
-import { Button } from "../ui/shadcnui/button";
-import { Field, FieldError } from "../ui/shadcnui/field";
-import { Input } from "../ui/shadcnui/input";
+import { Button } from "../ui/button";
+import { Field, FieldError } from "../ui/field";
+import { Input } from "../ui/input";
 
 const ContactForm = () => {
 	const {

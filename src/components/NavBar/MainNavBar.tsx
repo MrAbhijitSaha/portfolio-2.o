@@ -1,13 +1,13 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Lamphome } from "../ui/scrollxui/lamphome";
+import LamphomeAndAnimatedThemeTogglerMerged from "../CustomeComponents/LamphomeAndAnimatedThemeTogglerMerged";
 
 const MainNavBar = () => {
 	const { theme } = useTheme();
 
 	return (
-		<Lamphome
+		<LamphomeAndAnimatedThemeTogglerMerged
 			logoSrc={
 				theme === "dark" ? "/logo/logowhite.png" : "/logo/logo.png"
 			}

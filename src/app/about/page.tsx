@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 const page = () => {
 	return (
 		<section className="font-dosis">
-			<div className=""></div>
 			<AboutmeSection />
+
 			<MyDeveloperStackSection />
 		</section>
 	);

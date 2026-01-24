@@ -5,11 +5,12 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useEffect, useRef, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import { MdClose } from "react-icons/md";
 import { TbMoonFilled, TbSunFilled } from "react-icons/tb";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 interface NavItem {
 	href: string;
@@ -22,11 +23,11 @@ interface LamphomeProps {
 	logoSrc?: string;
 	logoAlt?: string;
 	navItems?: NavItem[];
-	children?: React.ReactNode;
+	children?: ReactNode;
 	className?: string;
 }
 
-export function Lamphome({
+const LamphomeAndAnimatedThemeTogglerMerged = ({
 	title,
 	description,
 	logoSrc,
@@ -34,13 +35,13 @@ export function Lamphome({
 	navItems = [],
 	children,
 	className = "",
-}: LamphomeProps) {
+}: LamphomeProps) => {
 	const [chainPulled, setChainPulled] = useState(false);
 	const [chainLength, setChainLength] = useState(48);
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 	const [dragY, setDragY] = useState(0);
 	const [isDragging, setIsDragging] = useState(false);
-	const [showGlow, setShowGlow] = useState(false);
+	// const [showGlow, setShowGlow] = useState(false);
 	const [glowPosition, setGlowPosition] = useState<"above" | "below">(
 		"below",
 	);
@@ -57,13 +58,14 @@ export function Lamphome({
 	// Initialize theme state and handle loading
 	useEffect(() => {
 		if (resolvedTheme === "dark") {
+			// eslint-disable-next-line react-hooks/set-state-in-effect
 			setChainPulled(true);
-			setShowGlow(true);
+			// setShowGlow(true);
 			setGlowPosition("above");
 			setChainLength(72);
 		} else {
 			setChainPulled(false);
-			setShowGlow(false);
+			// setShowGlow(false);
 			setGlowPosition("below");
 			setChainLength(48);
 		}
@@ -88,7 +90,7 @@ export function Lamphome({
 			setTheme(newTheme);
 			setChainPulled(newTheme === "dark");
 			setChainLength(newTheme === "dark" ? 72 : 48);
-			setShowGlow(newTheme === "dark");
+			// setShowGlow(newTheme === "dark");
 			return;
 		}
 
@@ -97,7 +99,7 @@ export function Lamphome({
 				setTheme(newTheme);
 				setChainPulled(newTheme === "dark");
 				setChainLength(newTheme === "dark" ? 72 : 48);
-				setShowGlow(newTheme === "dark");
+				// setShowGlow(newTheme === "dark");
 				if (newTheme === "dark") {
 					setGlowPosition("above");
 				} else {
@@ -235,6 +237,7 @@ export function Lamphome({
 					</div>
 
 					{/* Enhanced Chain Toggle with Animation Support */}
+
 					<div className="group absolute top-full right-3 z-10 mt-2 flex flex-col items-center">
 						<motion.div
 							className="relative w-1 rounded-full bg-linear-to-b from-gray-400 to-gray-600 shadow-sm dark:from-gray-500 dark:to-gray-300"
@@ -268,99 +271,121 @@ export function Lamphome({
 								</div>
 							)}
 						</motion.div>
-						<motion.div
-							ref={chainToggleRef}
-							drag="y"
-							dragConstraints={{ top: 0, bottom: 12 }}
-							dragElastic={0}
-							onDragStart={handleDragStart}
-							onDragEnd={handleDragEnd}
-							onDrag={(
-								event: MouseEvent | TouchEvent | PointerEvent,
-								info: PanInfo,
-							) => {
-								const newDragY = Math.max(0, info.offset.y);
-								setDragY(newDragY);
-								if (newDragY > 4) {
-									const position =
-										calculateGlowPosition(newDragY);
-									setGlowPosition(position);
-								}
-							}}
-							whileHover={{ scale: 1.05 }}
-							whileDrag={{
-								scale: 1.12,
-								boxShadow: `0 ${6 + dragY * 0.3}px ${14 + dragY * 0.3}px rgba(0,0,0,0.3)`,
-							}}
-							className="relative h-6 w-6 cursor-grab overflow-hidden rounded-full border-2 border-yellow-500 bg-linear-to-br from-yellow-400 to-yellow-600 shadow-lg transition-shadow duration-200 active:cursor-grabbing dark:border-yellow-400 dark:from-yellow-300 dark:to-yellow-500"
-							animate={{
-								rotateZ: chainPulled ? 180 : 0,
-							}}
-							transition={{
-								duration: 0.5,
-								ease: "easeInOut",
-							}}
-							style={{ position: "relative", top: -20, y: 0 }}>
-							<div className="h-full w-full rounded-full bg-linear-to-br from-yellow-300 to-transparent opacity-60"></div>
-							<div className="absolute inset-0 flex items-center justify-center">
-								<div className="flex flex-col space-y-0.5">
-									<TbMoonFilled />
-								</div>
-							</div>
-							{isDarkMode && (
+
+						<Tooltip>
+							<TooltipTrigger asChild>
 								<motion.div
-									initial={{ opacity: 0 }}
-									animate={{ opacity: 1 }}
-									className="absolute inset-0 flex items-center justify-center rounded-full bg-yellow-500/90 backdrop-blur-sm dark:bg-yellow-400/90">
-									<TbSunFilled color="black" />
-								</motion.div>
-							)}
-							{!isDragging && !chainPulled && (
-								<motion.div
-									className="pointer-events-none absolute -bottom-10 left-1/2 -translate-x-1/2 transform rounded-full bg-white/80 px-2 py-1 text-xs whitespace-nowrap text-gray-500 dark:bg-slate-800/80 dark:text-gray-400"
-									initial={{ opacity: 0, y: -5 }}
+									ref={chainToggleRef}
+									drag="y"
+									dragConstraints={{ top: 0, bottom: 12 }}
+									dragElastic={0}
+									onDragStart={handleDragStart}
+									onDragEnd={handleDragEnd}
+									onDrag={(
+										event:
+											| MouseEvent
+											| TouchEvent
+											| PointerEvent,
+										info: PanInfo,
+									) => {
+										const newDragY = Math.max(
+											0,
+											info.offset.y,
+										);
+										setDragY(newDragY);
+										if (newDragY > 4) {
+											const position =
+												calculateGlowPosition(newDragY);
+											setGlowPosition(position);
+										}
+									}}
+									whileHover={{ scale: 1.05 }}
+									whileDrag={{
+										scale: 1.12,
+										boxShadow: `0 ${6 + dragY * 0.3}px ${14 + dragY * 0.3}px rgba(0,0,0,0.3)`,
+									}}
+									className="relative h-6 w-6 cursor-grab overflow-hidden rounded-full border-2 border-yellow-500 bg-linear-to-br from-yellow-400 to-yellow-600 shadow-lg transition-shadow duration-200 active:cursor-grabbing dark:border-yellow-400 dark:from-yellow-300 dark:to-yellow-500"
 									animate={{
-										opacity: [0, 1, 1, 0],
-										y: [0, -2, -2, 0],
+										rotateZ: chainPulled ? 180 : 0,
 									}}
 									transition={{
-										duration: 3,
-										repeat: Infinity,
-										repeatDelay: 2,
+										duration: 0.5,
 										ease: "easeInOut",
+									}}
+									style={{
+										position: "relative",
+										top: -20,
+										y: 0,
 									}}>
-									Pull to toggle theme!
+									<div className="h-full w-full rounded-full bg-linear-to-br from-yellow-300 to-transparent opacity-60"></div>
+									<div className="absolute inset-0 flex items-center justify-center">
+										<div className="flex flex-col space-y-0.5">
+											<TbMoonFilled />
+										</div>
+									</div>
+									{isDarkMode && (
+										<motion.div
+											initial={{ opacity: 0 }}
+											animate={{ opacity: 1 }}
+											className="absolute inset-0 flex items-center justify-center rounded-full bg-yellow-500/90 backdrop-blur-sm dark:bg-yellow-400/90">
+											<TbSunFilled color="black" />
+										</motion.div>
+									)}
+									{!isDragging && !chainPulled && (
+										<motion.div
+											className="pointer-events-none absolute -bottom-10 left-1/2 -translate-x-1/2 transform rounded-full bg-white/80 px-2 py-1 text-xs whitespace-nowrap text-gray-500 dark:bg-slate-800/80 dark:text-gray-400"
+											initial={{ opacity: 0, y: -5 }}
+											animate={{
+												opacity: [0, 1, 1, 0],
+												y: [0, -2, -2, 0],
+											}}
+											transition={{
+												duration: 3,
+												repeat: Infinity,
+												repeatDelay: 2,
+												ease: "easeInOut",
+											}}>
+											Pull to toggle theme!
+										</motion.div>
+									)}
+									{isDragging && dragY > 4 && (
+										<motion.div
+											initial={{ opacity: 0, scale: 0.8 }}
+											animate={{
+												opacity: dragY > 8 ? 1 : 0.7,
+												scale: dragY > 8 ? 1.1 : 1,
+											}}
+											className={`pointer-events-none absolute -bottom-12 left-1/2 -translate-x-1/2 transform rounded-full px-3 py-1.5 text-xs font-medium whitespace-nowrap text-white transition-all duration-200 ${
+												glowPosition === "above"
+													? "bg-purple-600"
+													: "bg-amber-600"
+											}`}>
+											{dragY > 8
+												? `🌟 Release for ${glowPosition === "above" ? "Dark" : "Light"} Mode!`
+												: `Pull ${Math.round(8 - dragY)}px more`}
+										</motion.div>
+									)}
+									{!isDragging && dragY > 0 && (
+										<motion.div
+											className="absolute inset-0 rounded-full bg-yellow-300 opacity-30"
+											initial={{
+												scale: 1.2,
+												opacity: 0.5,
+											}}
+											animate={{ scale: 1, opacity: 0 }}
+											transition={{
+												duration: 0.3,
+												ease: "easeOut",
+											}}
+										/>
+									)}
 								</motion.div>
-							)}
-							{isDragging && dragY > 4 && (
-								<motion.div
-									initial={{ opacity: 0, scale: 0.8 }}
-									animate={{
-										opacity: dragY > 8 ? 1 : 0.7,
-										scale: dragY > 8 ? 1.1 : 1,
-									}}
-									className={`pointer-events-none absolute -bottom-12 left-1/2 -translate-x-1/2 transform rounded-full px-3 py-1.5 text-xs font-medium whitespace-nowrap text-white transition-all duration-200 ${
-										glowPosition === "above"
-											? "bg-purple-600"
-											: "bg-amber-600"
-									}`}>
-									{dragY > 8
-										? `🌟 Release for ${glowPosition === "above" ? "Dark" : "Light"} Mode!`
-										: `Pull ${Math.round(8 - dragY)}px more`}
-								</motion.div>
-							)}
-							{!isDragging && dragY > 0 && (
-								<motion.div
-									className="absolute inset-0 rounded-full bg-yellow-300 opacity-30"
-									initial={{ scale: 1.2, opacity: 0.5 }}
-									animate={{ scale: 1, opacity: 0 }}
-									transition={{
-										duration: 0.3,
-										ease: "easeOut",
-									}}
-								/>
-							)}
-						</motion.div>
+							</TooltipTrigger>
+
+							<TooltipContent side="bottom">
+								Drag it
+							</TooltipContent>
+						</Tooltip>
 					</div>
 
 					{/* Updated Mobile Menu with Fixed Z-Index - now positioned relative to the fixed navbar container */}
@@ -403,7 +428,7 @@ export function Lamphome({
 				</motion.div>
 			</div>
 
-			{isDarkMode && (
+			{/* {isDarkMode && (
 				<motion.div
 					initial={{ width: 0, opacity: 0 }}
 					animate={{
@@ -419,7 +444,7 @@ export function Lamphome({
 						className="pointer-events-none absolute top-full left-1/2 h-20 w-full -translate-x-1/2 transform"
 					/>
 				</motion.div>
-			)}
+			)} */}
 			{title && (
 				<motion.h1
 					ref={titleRef}
@@ -430,7 +455,7 @@ export function Lamphome({
 					{title}
 				</motion.h1>
 			)}
-			{!isDarkMode && (
+			{/* {!isDarkMode && (
 				<motion.div
 					initial={{ width: 0, opacity: 0 }}
 					animate={{
@@ -446,7 +471,7 @@ export function Lamphome({
 						className="pointer-events-none absolute top-full left-1/2 h-20 w-full -translate-x-1/2 transform"
 					/>
 				</motion.div>
-			)}
+			)} */}
 			{description && (
 				<motion.p
 					className="mt-4 max-w-xs px-4 text-center text-xs leading-relaxed text-gray-600 dark:text-gray-300 [@media(min-width:480px)]:mt-6 [@media(min-width:480px)]:max-w-md [@media(min-width:480px)]:text-sm [@media(min-width:640px)]:text-base [@media(min-width:768px)]:max-w-2xl [@media(min-width:768px)]:text-lg"
@@ -467,4 +492,6 @@ export function Lamphome({
 			)}
 		</div>
 	);
-}
+};
+
+export default LamphomeAndAnimatedThemeTogglerMerged;

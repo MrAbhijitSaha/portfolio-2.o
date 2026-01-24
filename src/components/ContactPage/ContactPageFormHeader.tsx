@@ -1,4 +1,4 @@
-import { AnimatedShinyText } from "../ui/magicui/animated-shiny-text";
+import { AnimatedShinyText } from "../ui/animated-shiny-text";
 
 const ContactPageFormHeader = () => {
 	return (

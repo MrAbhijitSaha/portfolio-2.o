@@ -1,4 +1,4 @@
-import { LinkPreview } from "@/components/ui/aceternityui/link-preview";
+import { LinkPreview } from "@/components/ui/link-preview";
 import { MySkillesStackSkillsCapsulePropsType } from "@/lib/alltypes";
 
 const MySkillesStackSkillsMap = ({

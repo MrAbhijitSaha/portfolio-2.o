@@ -1,6 +1,6 @@
 "use client";
 
-import { Separator } from "@/components/ui/shadcnui/separator";
+import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
 import { useMemo } from "react";

@@ -1,4 +1,4 @@
-import { BoxReveal } from "../ui/magicui/box-reveal";
+import { BoxReveal } from "../ui/box-reveal";
 
 const AboutmeSection = () => {
 	return (
